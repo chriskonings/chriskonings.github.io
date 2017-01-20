@@ -3,7 +3,7 @@ layout: post
 title:  "Duinoride"
 date:   2014-06-01 00:38:53 +0000
 category: work
-thumbnail: /assets/duinoride-thumbnail-02.png
+thumbnail: /assets/duinoride-thumbnail.png
 permalink: /work/:title/
 ---
 <h1 class="content__post-title h1 bold">Duinoride</h1>

@@ -3,8 +3,7 @@ layout: post
 title:  "Lecturing"
 date:   2015-01-01 00:38:53 +0000
 category: work
-thumbnail: /assets/lecturing-thumbnail-02.png
-bgnail : /assets/lecturing-thumbnail-02.png
+thumbnail: /assets/lecturing-01.jpg
 permalink: /work/:title/
 ---
 <h1 class="content__post-title h1 bold">Lecturing</h1>

@@ -3,7 +3,7 @@ layout: post
 title:  "Coffee Shop Hillier"
 date:   2014-08-01 00:38:53 +0000
 category: work
-thumbnail: /assets/coffee-shop-thumbnail-02.png
+thumbnail: /assets/coffee-shop-thumbnail.png
 permalink: /work/:title/
 ---
 

@@ -38,6 +38,6 @@ permalink: /work/:title/
       </ul>
   </div>
   <div class="content__post-half">
-    <img class="content__post-image" src="/assets/coffee-shop-02.png"/>
+    <img class="content__post-image" src="/assets/eagle-01.png"/>
   </div>
 </div>
