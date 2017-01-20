@@ -1,0 +1,47 @@
+---
+layout: post
+title:  "The Larks"
+date:   2014-05-02 00:38:53 +0000
+category: work
+thumbnail: /assets/larks-01.jpg
+permalink: /work/:title/
+---
+<h1 class="content__post-title h1 bold">The Larks</h1>
+
+<h2 class="h3 content__post-date">May 2014</h2>
+
+<div class="content__post-block content__post-block--margin">
+  <div class="content__post-full">
+    <div class="videoWrapper">
+      <iframe width="560" height="349" src="//www.youtube.com/embed/NhrtXXjkJ34" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="content__post-block content__post-block--margin margin-m">
+  <div class="content__post-half">
+    <div class="content__post-sub-title margin-s margin-no-top">Interactive Theater</div>
+    <p class="block margin-s margin-no-top">
+    I was invited by <a href="http://www.the-larks.com/" alt="The Larks">The Larks</a> to collaborate on a game as part of their latest performance. The game was to include technology to reveal a narrative and challenge players.
+    </p>
+    <div class="content__post-sub-title margin-s">Process</div>
+    <p class="block margin-xs margin-no-top">
+    I worked closely with <a href="http://www.twitter.com/jaredhemmings" alt="Jared Hemmings">Jared Hemmings</a> to build the required components, including: pressure-sensitive chairs, remote controls and a logic-fitted rotary phone.
+    </p>
+    <p class="block margin-xs margin-no-top">
+    We used micro-controllers (<a href="https://www.arduino.cc/" alt="Arduinos">Arduinos</a>) to give our components logic and worked with <a href="http://www.the-larks.com/" alt="The Larks">The Larks</a> to sync each prop component to video, music and lighting.
+    </p>
+    <p class="block margin-xs margin-no-top">
+    This was a one week collaboration resulting in a days-worth of performances.
+    </p>
+  </div>
+  <div class="content__post-half">
+    <img class="content__post-image" src="/assets/larks-01.jpg"/>
+  </div>
+</div>
+
+
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/

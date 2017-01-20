@@ -1,0 +1,32 @@
+{% assign current = page.url | downcase | split: '/' %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Chris Konings</title>
+    <link rel="stylesheet" {% if current.length > 0 %}href=../assets/main.css"{% else %}href="../../assets/main.css"{% endif %}>
+  </head>
+  <body class="wrapper">
+      <header class="header">
+        <div class="header__name">
+          <a class="header__name-link" href="/">Chris Konings</a>
+          <span class="h5 header__name-role">Design | Front-End Dev</span>
+          <img class="header__emoji" src="../../assets/emoji.png">
+        </div>
+        <nav class="nav-wrapper">
+          <ul class="nav">
+            <!-- <li {% if current[1] == "work" %}class="nav__item nav__item--active"{% else %}class="nav__item"{% endif %}>
+              <a class="nav__item-link" href="/work/">work</a>
+            </li> -->
+            <!-- <li {% if current[1] == "blog" %}class="nav__item nav__item--active"{% else %}class="nav__item"{% endif %}>
+              <a class="nav__item-link" href="/blog/">blog</a>
+            </li> -->
+            <li {% if current[1] == "about" %}class="nav__item nav__item--active"{% else %}class="nav__item"{% endif %}>
+              <a class="nav__item-link" href="/about/">about</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__block">
+          <!-- <h1>Page Title: {{ page.title }}</h1> -->
+        </div>
+      </header>
