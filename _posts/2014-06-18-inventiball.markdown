@@ -38,7 +38,7 @@ permalink: /work/:title/
       <li>Illustrator</li>
     </ul>
     <p class="block margin-s">
-      <a href="/assets/inventiball-concept-document.pdf" target="_blank">Download Concept Document</a>.
+      <a href="https://drive.google.com/file/d/0B2gaddbTuV-1b2V4c2xRWnpXMWs/view?usp=sharing" target="_blank">Download Concept Document</a>.
     </p>
   </div>
 </div>

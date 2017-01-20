@@ -35,7 +35,7 @@ permalink: /work/:title/
       <li>Premiere Pro</li>
     </ul>
     <p class="block margin-s">
-      <a href="/assets/donana-project-document.pdf" target="_blank">Donana Project Document</a>.
+      <a href="https://drive.google.com/file/d/0B2gaddbTuV-1RG5tb2VJUDNFY1E/view?usp=sharing" target="_blank">Donana Project Document</a>.
     </p>
   </div>
 </div>

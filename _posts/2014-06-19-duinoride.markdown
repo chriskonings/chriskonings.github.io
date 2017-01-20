@@ -41,7 +41,7 @@ permalink: /work/:title/
       <li>3D Printer</li>
     </ul>
     <p class="block margin-m">
-      <a href="/assets/duinoride-project-document.pdf" target="_blank">Download Project Document</a>.
+      <a href="https://drive.google.com/file/d/0B2gaddbTuV-1M0k0aUhkLWFZUlE/view?usp=sharing" target="_blank">Download Project Document</a>.
     </p>
   </div>
 </div>
