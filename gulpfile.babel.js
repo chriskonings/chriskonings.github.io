@@ -7,7 +7,8 @@ const
   child = require('child_process'),
   browserSync = require('browser-sync').create(),
   siteRoot = '_site',
-  cssFiles = '_css/**/*.?(s)css';
+  cssFiles = '_css/**/*.?(s)css',
+  cleanCSS = require('gulp-clean-css');
 
 gulp.task('serve', () => {
   browserSync.init({
@@ -42,6 +43,7 @@ gulp.task('css', () => {
     .pipe(sass())
     .pipe(concat('main.css'))
     .pipe(autoprefixer())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('assets'));
 });
 
