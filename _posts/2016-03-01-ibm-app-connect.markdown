@@ -14,11 +14,11 @@ permalink: /work/:title/
       <div class="content__post-sub-title margin-s margin-no-top">Product</div>
       IBM App Connect is a new offering within IBM Cloud Integration that links and moves data between APIs to create automated workflows. It offers a personal and professional package, depending on usage. The product is still in early release and may be protected under an NDA at the time of this post.
     </div>
-    <a class="button margin-m margin-no-top" href="https://appconnect.ibmcloud.com/" title="more info" target="_blank">More Info</a>
     <div class="block margin-s margin-no-top">
       <div class="content__post-sub-title margin-s margin-no-top">Role</div>
       I am a front-end developer working with a team of designers and engineers. I work with the design team to ensure a feasible solution that meets user needs and build wireframes and coded prototypes for usability testing. I translate our design decisions to the engineering team and communicate goals and tasks across the board so that deliverables are completed on a timely manner.
     </div>
+    <a class="button margin-s" href="https://appconnect.ibmcloud.com/" title="product website" target="_blank">Product Website</a>
   </div>
   <div class="content__post-half">
     <img class="content__post-image" src="/assets/app-connect-thumbnail.jpg" alt="app connect"/>
