@@ -426,7 +426,7 @@ a {
   margin: 25px auto; }
   @media only screen and (min-width: 960px) {
     .content__post {
-      margin: 50px auto 0 auto; } }
+      margin: 20px auto 0 auto; } }
 
 .content__post--about {
   max-width: 800px; }
