@@ -1,16 +1,14 @@
 ---
-layout: post
+layout: default
 title:  "Eagle Payroll"
 date:   2014-10-01 00:38:53 +0000
 category: work
-thumbnail: /assets/eagle-thumbnail-02.png
-bgnail: /assets/eagle-thumbnail-02.png
+thumbnail: /assets/eagle-thumbnail.png
 permalink: /work/:title/
+published: false
 ---
 <h1 class="content__post-title h1 bold">Eagle Payroll</h1>
-
 <h2 class="h3 content__post-date">October 2014</h2>
-
 <div class="content__post-block content__post-block--margin">
   <div class="content__post-full">
     <div class="videoWrapper">
@@ -18,15 +16,14 @@ permalink: /work/:title/
     </div>
   </div>
 </div>
-
 <div class="content__post-block margin-m">
   <div class="content__post-half">
     <p class="block margin-xs margin-no-top">
-      I lead this client-project as the sole full-time Front-End Developer employed by <a href="http://www.thepaperface.co.uk/" target="_blank">The Paperface</a>. From pitch, project management, wireframes, concept to development and content curation.
+      I secured and led a client project as a full-time front-end developer for <a href="http://www.thepaperface.co.uk/" target="_blank" title="the paperface">The Paperface</a>. My work involved project management, concept execution, wireframing, and content curation.
     </p>
     <div class="content__post-sub-title margin-s">Client and Concept</div>
     <p class="block margin-s margin-no-top">
-      The website was for a proffessional payroll company that needed a sleek and informative website that they could maintain for their large customer-base. However, they appreciated the draw of a good site and requested it have eye-catching motion and interactive elements.
+      The client was a professional payroll company that needed a sleek and practical website that can be maintained across a large customer-base.
     </p>
     <span class="content__post-sub-title margin-xs">Tools:</span>
       <ul class="bullet-list">
@@ -38,6 +35,6 @@ permalink: /work/:title/
       </ul>
   </div>
   <div class="content__post-half">
-    <img class="content__post-image" src="/assets/eagle-01.png"/>
+    <img class="content__post-image" src="/assets/eagle-01.png" alt="eagle payroll"/>
   </div>
 </div>

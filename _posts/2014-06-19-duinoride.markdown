@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Duinoride"
 date:   2014-06-01 00:38:53 +0000
 category: work
@@ -7,9 +7,7 @@ thumbnail: /assets/duinoride-thumbnail.png
 permalink: /work/:title/
 ---
 <h1 class="content__post-title h1 bold">Duinoride</h1>
-
 <h2 class="h3 content__post-date">June 2014</h2>
-
 <div class="content__post-block">
   <div class="content__post-full">
     <div class="videoWrapper">
@@ -17,7 +15,6 @@ permalink: /work/:title/
     </div>
   </div>
 </div>
-
 <div class="content__post-block margin-m">
   <div class="content__post-half">
   <div class="content__post-sub-title margin-s margin-no-top">Out Of The Comfort Zone</div>
@@ -41,12 +38,7 @@ permalink: /work/:title/
       <li>3D Printer</li>
     </ul>
     <p class="block margin-m">
-      <a href="https://drive.google.com/file/d/0B2gaddbTuV-1M0k0aUhkLWFZUlE/view?usp=sharing" target="_blank">Download Project Document</a>.
+      <a class="button" href="https://drive.google.com/file/d/0B2gaddbTuV-1M0k0aUhkLWFZUlE/view?usp=sharing" target="_blank" title="download project document">Download Project Document</a>.
     </p>
   </div>
 </div>
-
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
