@@ -3,7 +3,7 @@ layout: default
 title:  "IBM App Connect"
 date:   2016-05-01 00:38:53 +0000
 category: work
-thumbnail: /assets/app-connect-thumbnail.png
+thumbnail: /assets/app-connect-thumbnail.jpg
 permalink: /work/:title/
 ---
 <h1 class="content__post-title h1 bold">IBM App Connect</h1>
@@ -21,6 +21,6 @@ permalink: /work/:title/
     </div>
   </div>
   <div class="content__post-half">
-    <img class="content__post-image" src="/assets/app-connect-thumbnail.png" alt="app connect"/>
+    <img class="content__post-image" src="/assets/app-connect-thumbnail.jpg" alt="app connect"/>
   </div>
 </div>

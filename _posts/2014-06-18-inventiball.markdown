@@ -3,7 +3,7 @@ layout: default
 title:  "Inventiball"
 date:   2014-06-01 00:38:53 +0000
 category: work
-thumbnail: /assets/inventiball-thumbnail.png
+thumbnail: /assets/inventiball-thumbnail.jpg
 permalink: /work/:title/
 ---
 <h1 class="content__post-title h1 bold">Inventiball</h1>
@@ -34,6 +34,6 @@ permalink: /work/:title/
       </ul>
   </div>
   <div class="content__post-half">
-    <img class="content__post-image" src="/assets/inventiball-thumbnail.png" alt="inventiball"/>
+    <img class="content__post-image" src="/assets/inventiball-thumbnail.jpg" alt="inventiball"/>
   </div>
 </div>

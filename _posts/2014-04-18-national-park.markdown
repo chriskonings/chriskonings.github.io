@@ -3,7 +3,7 @@ layout: default
 title:  "National Park Project"
 date:   2014-05-02 00:38:53 +0000
 category: work
-thumbnail: /assets/national-park-thumbnail-02.png
+thumbnail: /assets/national-park-thumbnail-02.jpg
 permalink: /work/:title/
 ---
 <h1 class="content__post-title h1 bold">National Park Project</h1>

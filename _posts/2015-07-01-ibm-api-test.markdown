@@ -3,7 +3,7 @@ layout: default
 title:  "IBM API Test"
 date:   2016-05-01 00:38:53 +0000
 category: work
-thumbnail: /assets/ibm-api-test-thumbnail-02.png
+thumbnail: /assets/ibm-api-test-thumbnail-02.jpg
 permalink: /work/:title/
 ---
 <h1 class="content__post-title h1 bold">IBM API Test</h1>

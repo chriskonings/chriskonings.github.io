@@ -3,7 +3,7 @@ layout: default
 title:  "Coffee Shop Hillier"
 date:   2014-08-01 00:38:53 +0000
 category: work
-thumbnail: /assets/coffee-shop-thumbnail-02.png
+thumbnail: /assets/coffee-shop-thumbnail-02.jpg
 permalink: /work/:title/
 published: false
 ---
