@@ -2,10 +2,9 @@
 layout: default
 title:  "Coffee Shop Hillier"
 date:   2014-08-01 00:38:53 +0000
-category: work
-thumbnail: /assets/coffee-shop-thumbnail-02.jpg
+category: other
+thumbnail: /assets/coffee-shop-thumbnail-02.png
 permalink: /work/:title/
-published: false
 ---
 <h1 class="content__post-title h1 bold">Coffee Shop Hillier</h1>
 <h2 class="h3 content__post-date">August 2014</h2>
@@ -35,7 +34,7 @@ published: false
         <li>Wordpress</li>
       </ul>
       <p class="block margin-m">
-        <a href="http://thecoffeeshophillier.co.uk/" target="_blank" title="visit website">Visit Website</a>.
+        <a class="button" href="http://thecoffeeshophillier.co.uk/" target="_blank" title="visit website">Visit Website</a>.
       </p>
   </div>
 </div>

@@ -2,10 +2,9 @@
 layout: default
 title:  "Eagle Payroll"
 date:   2014-10-01 00:38:53 +0000
-category: work
+category: other
 thumbnail: /assets/eagle-thumbnail.png
 permalink: /work/:title/
-published: false
 ---
 <h1 class="content__post-title h1 bold">Eagle Payroll</h1>
 <h2 class="h3 content__post-date">October 2014</h2>
