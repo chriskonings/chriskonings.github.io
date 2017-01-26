@@ -332,6 +332,10 @@ a {
   // }
 }
 
+.post-list--post {
+  margin-top: 100px;
+}
+
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -376,8 +380,12 @@ a {
     padding-bottom: 99%; /* = width for a 1:1 aspect ratio */
     margin: 0.5%;
   }
+}
 
-
+.post-list__post--post {
+  width: 250px;
+  padding-bottom: 250px;
+  margin: 5px;
 }
 
 .post-list__content {
