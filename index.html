@@ -5,15 +5,36 @@ category: none
 date: 2012-04-06 21:35
 ---
 
-<div class="content__page">
-  <ul class="post-list">
-    {% for post in site.categories.work %}
-      <li class="post-list__post">
-        <a title="{{ post.title | escape }}" class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <div class="post-list__content" style="background-image:url('{{ post.thumbnail }}');"></div>
-          <span class="post-list__post-title">{{ post.title | escape }}</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="content__post">
+  <div class="content__post-block margin-xl">
+    <div class="content__post-half content__post-half--large">
+      <div class="block margin-no-top bold">CURRENTLY</div>
+      <a class="h1 block bold no-underline margin-s margin-no-top" href="http://www.ibm.com/design/" title="IBM Design" target="_blank">IBM Design</a>
+      <p class="block">
+        <span class="block margin-xs">
+          I'm a Designer and Front-End Developer with a background in web agency, freelance and lecturing.
+        </span>
+        <span class="block margin-xs">
+          I write scalable and maintainable front-end code using HTML, CSS/SCSS, BEM, Javascript/jQuery, Wordpress, Angular 1.x, Unity3D and GitHub.
+        </span>
+        <span class="block margin-xs">
+          I design using Sketch, Photoshop, Illustrator, and Design Thinking.
+        </span>
+      </p>
+    </div>
+  </div>
+  <div class="content__post-block">
+    <div class="content__post-full">
+      <ul class="post-list">
+        {% for post in site.categories.work %}
+          <li class="post-list__post">
+            <a title="{{ post.title | escape }}" class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">
+              <div class="post-list__content" style="background-image:url('{{ post.thumbnail }}');"></div>
+              <span class="post-list__post-title">{{ post.title | escape }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>
