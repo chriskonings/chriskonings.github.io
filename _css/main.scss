@@ -100,6 +100,10 @@ a {
   color: #7d7d7d;
 }
 
+.content__post-sub-title--small {
+  @extend .h5;
+}
+
 .content__post-content {
   margin: 1.5em auto;
 }
@@ -327,6 +331,7 @@ a {
 }
 
 .nav__item-link {
+  @extend h3;
   text-decoration: none;
   &:hover {
     color: #000;
