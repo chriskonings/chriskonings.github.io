@@ -1,6 +1,10 @@
 {% include header.html %}
   <main class="content">
     <div class="content__post">
+      <div class="content__post-details">
+        <h1>{{page.title}}</h1>
+        <h2>{{page.customdate}}</h2>
+      </div>
       {{ content }}
       <div class="content__nav">
         {% if page.previous %}

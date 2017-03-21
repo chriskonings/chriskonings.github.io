@@ -12,6 +12,7 @@ a {
   font-weight: 900;
   color: $body-color;
   transition: color 0.1s ease;
+  text-decoration: none;
   &:hover {
     color: #777;
   }
@@ -35,19 +36,21 @@ a {
   }
 }
 
+.button--margin {
+  margin: .3em 0;
+}
+
 .wrapper {
-  //font-weight: 700;
   position: relative;
   display: flex;
   flex-direction: column;
   font-family: $primary-font-family;
-  background-color: #f9f9f9;
+  background-color: $white-color;
   min-height: 100vh;
   height: auto;
   font-size: $body-font-size-px;
   font-size: $body-font-size-rem;
   -webkit-overflow-scrolling: touch;
-  line-height: 1.58;
 }
 
 .flex-wrap {
@@ -73,43 +76,31 @@ a {
 
 .content__post {
   max-width: 960px;
-  margin: 25px auto;
+  margin: 50px auto;
   @media only screen and (min-width: 960px) {
-    margin: 20px auto 0 auto;
+    margin: 50px auto 0 auto;
   }
+}
+
+.content__post-details {
+  padding: 10px 0;
+  border-top: 2px solid $body-color;
 }
 
 .content__post--about {
   max-width: 800px;
 }
 
-.content__post-title {
-  @extend h1;
-  font-weight: 900;
-}
-
 .content__post-sub-title {
-  @extend h3;
   @extend .margin-xs;
   @extend .margin-no-top;
-  font-weight: 500;
   position: relative;
-  display: block;
   width: 100%;
   overflow: hidden;
-  color: #7d7d7d;
-}
-
-.content__post-sub-title--small {
-  @extend .h5;
 }
 
 .content__post-content {
-  margin: 1.5em auto;
-}
-
-.content__post-content--no-top {
-  margin-top: 0;
+      margin-top: 1.5em;
 }
 
 .content__post-date {
@@ -121,18 +112,20 @@ a {
   width: 100%;
   margin: 0 auto;
   max-width: 960px;
-  height: 50px;
-  line-height: 50px;
+  padding: 25px 0;
+  display: flex;
 }
 
 .content__nav-prev {
+  flex: 1;
   text-decoration: none;
-  float: left;
+  text-align: left;
 }
 
 .content__nav-next {
+  flex: 1;
   text-decoration: none;
-  float: right;
+  text-align: right;
 }
 
 .content__block {
@@ -143,11 +136,10 @@ a {
   width: 100%;
   display: block;
   overflow: auto;
-  margin: -0.5%;
+  margin: auto -.5%;
 }
 
-.content__post-block--margin {
-  margin-top: 1em;
+.content__post-block--hero {
   margin-bottom: 1em;
 }
 
@@ -228,11 +220,6 @@ a {
   height: 100%;
 }
 
-.bullet-list {
-  list-style: disc;
-  padding-left: 20px;
-}
-
 .bullet-list--no-style {
   list-style: none;
 }
@@ -289,6 +276,9 @@ a {
 .header__name-role {
   font-weight: normal;
   display: block;
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin: 0 10px;
   @media only screen and (min-width: 750px) {
     display: inline-block;
   }
@@ -296,6 +286,8 @@ a {
 
 .header__name-link {
   text-decoration: none;
+  display: inline-block;
+  font-family: $secondary-font-family;
   &:hover {
     animation: wiggle 0.3s infinite;
   }
@@ -348,7 +340,9 @@ a {
 
 
 .post-list {
-
+  list-style: none;
+  padding: 0;
+  margin: auto -.5%;
 }
 
 .post-list--post {
@@ -365,8 +359,8 @@ a {
 .post-list__post {
   position: relative;
   float:left;
-  width: 49%;
-  padding-bottom: 49%; /* = width for a 1:1 aspect ratio */
+  width: 99%;
+  padding-bottom: 99%; /* = width for a 1:1 aspect ratio */
   margin: 0.5%;
   //margin: 0.5%;
   // background-color: #efefef;
@@ -450,8 +444,8 @@ a {
     // }
     filter: grayscale(0%);
     .post-list__post-title {
-      color: #000;
-      transform: translateY(0);
+      color: $white-color;
+      transform: translateX(0);
     }
     .post-list__content {
       transform: scale(1.1);
@@ -461,26 +455,24 @@ a {
 
 @keyframes wiggle {
   0% { transform: rotate(0deg); }
-  25% { transform: rotate(-5deg); }
+  25% { transform: rotate(-0.5deg); }
   50% { transform: rotate(0deg); }
-  75% { transform: rotate(5deg); }
+  75% { transform: rotate(0.5deg); }
   100% { transform: rotate(0deg); }
 }
 
 
 .post-list__post-title {
+  text-transform: uppercase;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  display: inline-block;
   z-index: 99;
-  height: 25px;
-  line-height: 25px;
-  padding: 2% 0;
-  text-align: center;
-  background: #f9f9f9;
-  transform: translateY(100%);
+  margin: 0;
+  padding: 0 10px;
+  color: $white-color;
+  background: $body-color;
+  transform: translateX(-100%);
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -503,13 +495,11 @@ a {
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  line-height: initial;
   @media only screen and (min-width: 960px) {
     flex-direction: row;
-    line-height: 60px;
   }
 }
 
