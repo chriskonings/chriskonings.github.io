@@ -310,6 +310,6 @@
 
 @supports(display:grid) {
   .gcs-message {
-    display: hidden;
+    display: none;
   }
 }
