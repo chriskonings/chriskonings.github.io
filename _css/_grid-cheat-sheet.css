@@ -1,5 +1,6 @@
 .gcs-container {
   display: grid;
+  margin: 2rem 0;
   background: #dedede;
 }
 
@@ -142,7 +143,6 @@
   grid-auto-flow: dense;
 }
 
-
 .gcs-container--ex-eight .gcs-item--red {
   /* span two column tracks */
   grid-column-end: span 3;
@@ -150,8 +150,6 @@
   /* span two row tracks */
   grid-row-end: span 3;
 }
-
-
 
 .gcs-container--ex-eight .gcs-item--orange {
   /* span three column tracks */
