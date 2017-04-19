@@ -2,10 +2,17 @@
 @import 'variables';
 @import 'syntax';
 @import 'typography';
+@import 'prism';
+@import 'grid-cheat-sheet';
 
 html {
   min-height: 100vh;
   font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 a {

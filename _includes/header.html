@@ -7,7 +7,8 @@
     <title>Chris Konings</title>
     <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" {% if current.length > 0 %}href=../assets/main.css"{% else %}href="../../assets/main.css"{% endif %}>
+    <link rel="stylesheet" {% if current.length > 0 %}href="../assets/main.css"{% else %}href="../../assets/main.css"{% endif %}>
+    <script {% if current.length > 0 %}src="../assets/prism.js"{% else %}src="../../assets/prism.js"{% endif %}></script>
   </head>
   <body class="wrapper">
       <header class="header">
