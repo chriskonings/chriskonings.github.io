@@ -37,8 +37,8 @@ body {
 }
 
 main {
-  margin: 80px 50px;
-  animation: fadein 1s;
+  animation: fadein 1s ease;
+  margin: 20px 50px;
 }
 
 a {
@@ -76,6 +76,10 @@ a {
   max-width: 960px;
   margin: 0 auto;
   position: relative;
+}
+
+.page--home {
+  padding-top: 60px;
 }
 
 .post {
@@ -267,6 +271,7 @@ a {
 .post-list {
   list-style: none;
   padding: 0;
+  animation: riseup 1s ease;
 }
 
 .post-list__post {
@@ -389,4 +394,13 @@ a {
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@keyframes riseup {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
