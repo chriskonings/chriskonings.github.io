@@ -7,234 +7,208 @@ permalink: /css-grid-cheat-sheet/
 ---
 <div class="gcs-message">Your browser does not support CSS Grid!</div>
 
-<div class="content__post-block content__post-block--hero">
+<div class="block">
   <h1 class="font-alt center">{{page.title}}</h1>
   <p class="center">A simple cheat sheet for CSS Grid, inspired by <a href="http://gridbyexample.com" target="_blank">Grid By Example</a></p>
 </div>
 
-<div class="content__post-block">
-  <div class="content__post-full">
-    <div class="content__post-content">
-      <h2>What is CSS Grid?</h2>
-      <p>CSS Grid is one of the best ways to build layouts because it is a two dimensional layout system, it uses columns and rows.</p>
-      <h2>Resources</h2>
-      <ul>
-        <li><a href="http://caniuse.com/#feat=css-grid" target="_blank">Can I use?</a>
-        </li>
-        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">Complete guide to CSS Grid</a>
-        </li>
-         <li><a href="http://gridbyexample.com" target="_blank">Grid By Example</a>
-        </li>
-        <li><a href="http://jensimmons.com/post/feb-27-2017/learn-css-grid" target="_blank">Learn CSS Grid</a>
-        </li>
-        <li><a href="http://cssgridgarden.com/" target="_blank">CSS Grid Garden</a>
-        </li>
-        <li><a href="http://griddy.io/" target="_blank">Griddy</a>
-        </li>
-        <li><a href="https://24ways.org/2016/what-next-for-css-grid-layout/" target="_blank">What's next for CSS Grid layout?</a>
-        </li>
-      </ul>
-      <h2>Exercises:</h3>
-    </div>
-    <div class="content__post-content">
-      <h3>Defining A Grid</h3>
-      <p>A fixed grid.</p>
-      <div class="gcs-container gcs-container--ex-one">
-        <div class="gcs-item">1</div>
-        <div class="gcs-item">2</div>
-        <div class="gcs-item">3</div>
-        <div class="gcs-item">4</div>
-        <div class="gcs-item">5</div>
-        <div class="gcs-item">6</div>
-        <div class="gcs-item">7</div>
-        <div class="gcs-item">8</div>
-      </div>
-      <pre class="line-numbers">
-        <code class="language-css">.container { display: grid; }
+<div class="block">
+  <h2>What is CSS Grid?</h2>
+  <p>CSS Grid is one of the best ways to build layouts because it is a two dimensional layout system, it uses columns and rows.</p>
+  <h2>Resources</h2>
+  <ul>
+    <li><a href="http://caniuse.com/#feat=css-grid" target="_blank">Can I use?</a>
+    </li>
+    <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">Complete guide to CSS Grid</a>
+    </li>
+     <li><a href="http://gridbyexample.com" target="_blank">Grid By Example</a>
+    </li>
+    <li><a href="http://jensimmons.com/post/feb-27-2017/learn-css-grid" target="_blank">Learn CSS Grid</a>
+    </li>
+    <li><a href="http://cssgridgarden.com/" target="_blank">CSS Grid Garden</a>
+    </li>
+    <li><a href="http://griddy.io/" target="_blank">Griddy</a>
+    </li>
+    <li><a href="https://24ways.org/2016/what-next-for-css-grid-layout/" target="_blank">What's next for CSS Grid layout?</a>
+    </li>
+  </ul>
+  <h2>Exercises:</h3>
+  <h3>Defining A Grid</h3>
+  <p>A fixed grid.</p>
+  <div class="gcs-container gcs-container--ex-one">
+    <div class="gcs-item">1</div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+    <div class="gcs-item">7</div>
+    <div class="gcs-item">8</div>
+  </div>
+  <pre class="line-numbers">
+    <code class="language-css">.container { display: grid; }
 
-        .gcs-container--ex-one {
-          /* how many columns and their width by px */
-          grid-template-columns: 200px 200px 200px;
-          /* how many rows and their height by px */
-          grid-template-rows: 200px 50px;
-          /* the size of rows that have not been implicitly sized */
-          grid-auto-rows: 100px;
-          /* the size of space between columns */
-          grid-column-gap: 20px;
-          /* the size of space between rows */
-          grid-row-gap: 20px;
-          /* Shorthand for the size of space between rows AND columns */
-          /* grid-gap: 20px; */
-        }</code>
-      </pre>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Introducing the 'fr' unit</h3>
-      <p>The 'fr' unit can be used for flexible grids, fr is a fraction of space within grid container.</p>
-      <div class="gcs-container gcs-container--ex-two">
-        <div class="gcs-item">1</div>
-        <div class="gcs-item">2</div>
-        <div class="gcs-item">3</div>
-        <div class="gcs-item">4</div>
-        <div class="gcs-item">5</div>
-        <div class="gcs-item">6</div>
-        <div class="gcs-item">7</div>
-        <div class="gcs-item">8</div>
-      </div>
-      <p>A fr column will resize around a fixed column too!</p>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Repeat function</h3>
-      <p>We can use repeat() notation when our grid has a repeating pattern.</p>
-      <div class="gcs-container gcs-container--ex-three">
-        <div class="gcs-item">1</div>
-        <div class="gcs-item">2</div>
-        <div class="gcs-item">3</div>
-        <div class="gcs-item">4</div>
-        <div class="gcs-item">5</div>
-        <div class="gcs-item">6</div>
-        <div class="gcs-item">7</div>
-        <div class="gcs-item">8</div>
-      </div>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Minmax function</h3>
-      <p>The minmax() function is unique to CSS Grid, we can use it to specifify the min and max size of a grid track.</p>
-      <div class="gcs-container gcs-container--ex-four">
-        <div class="gcs-item">1<p>Hello World</p></div>
-        <div class="gcs-item">2</div>
-        <div class="gcs-item">3</div>
-        <div class="gcs-item">4</div>
-        <div class="gcs-item">5</div>
-        <div class="gcs-item">6</div>
-        <div class="gcs-item">7</div>
-        <div class="gcs-item">8</div>
-      </div>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Auto-placement</h3>
-      <p>A grid will place it's elements in default order unless we define the flow.</p>
-      <div class="gcs-container gcs-container--ex-five">
-        <div class="gcs-item">1</div>
-        <div class="gcs-item">2</div>
-        <div class="gcs-item">3</div>
-        <div class="gcs-item">4</div>
-        <div class="gcs-item">5</div>
-        <div class="gcs-item">6</div>
-        <div class="gcs-item">7</div>
-        <div class="gcs-item">8</div>
-      </div>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Order</h3>
-      <p>We can change the order of the elements displayed in the grid.</p>
-      <div class="gcs-container gcs-container--ex-order">
-        <div class="gcs-item">1</div>
-        <div class="gcs-item">2</div>
-        <div class="gcs-item">3</div>
-        <div class="gcs-item">4</div>
-        <div class="gcs-item">5</div>
-        <div class="gcs-item">6</div>
-        <div class="gcs-item">7</div>
-        <div class="gcs-item">8</div>
-      </div>
-      <p>Note: Changing the order of an element in CSS does not change it in the DOM, consider this when styling tabbed elements etc.</p>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Auto-fill</h3>
-      <p>auto-fill will create as many tracks as will fit in to the container. Any empty tracks will remain part of the grid.</p>
-      <div class="gcs-container gcs-container--ex-six">
-        <div class="gcs-item">1</div>
-        <div class="gcs-item">2</div>
-        <div class="gcs-item">3</div>
-        <div class="gcs-item">4</div>
-        <div class="gcs-item">5</div>
-        <div class="gcs-item">6</div>
-        <div class="gcs-item">7</div>
-        <div class="gcs-item">8</div>
-      </div>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Auto-fit</h3>
-      <p>auto-fit will create as many tracks as will fit in to the container but, unlike auto-fill, it will drop any empty tracks and fill the rest of the space left behind.</p>
-      <div class="gcs-container gcs-container--ex-seven">
-        <div class="gcs-item">1</div>
-        <div class="gcs-item">2</div>
-        <div class="gcs-item">3</div>
-        <div class="gcs-item">4</div>
-        <div class="gcs-item">5</div>
-        <div class="gcs-item">6</div>
-        <div class="gcs-item">7</div>
-        <div class="gcs-item">8</div>
-      </div>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Dense and location</h3>
-      <p>Dense will attempt to fill in gaps earlier in the grid if smaller items come up later and we can define the location of items and how far they span.</p>
-        <p>We can also move our items around the grid and make them span across multiple rows and columns.</p>
-      <div class="gcs-container gcs-container--ex-eight">
-        <div class="gcs-item gcs-item--blue">1</div>
-        <div class="gcs-item gcs-item--red">2</div>
-        <div class="gcs-item gcs-item--purple">3</div>
-        <div class="gcs-item gcs-item--orange">4</div>
-        <div class="gcs-item gcs-item--deep-purple">5</div>
-        <div class="gcs-item gcs-item--pink">6</div>
-        <div class="gcs-item gcs-item--blue">7</div>
-        <div class="gcs-item gcs-item--red">8</div>
-        <div class="gcs-item gcs-item--purple">9</div>
-        <div class="gcs-item gcs-item--orange">10</div>
-        <div class="gcs-item gcs-item--deep-purple">11</div>
-        <div class="gcs-item gcs-item--pink">12</div>
-        <div class="gcs-item gcs-item--blue">13</div>
-        <div class="gcs-item gcs-item--red">14</div>
-        <div class="gcs-item gcs-item--purple">15</div>
-        <div class="gcs-item gcs-item--orange">16</div>
-        <div class="gcs-item gcs-item--deep-purple">17</div>
-        <div class="gcs-item gcs-item--pink">18</div>
-        <div class="gcs-item gcs-item--blue">19</div>
-        <div class="gcs-item gcs-item--red">20</div>
-        <div class="gcs-item gcs-item--grey">grey</div>
-      </div>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Named lines</h3>
-      <p>Use named lines to define the lines between content and change their placement with media queries.</p>
-      <div class="gcs-container gcs-container--ex-nine">
-        <div class="gcs-item gcs-item--red">Red</div>
-        <div class="gcs-item gcs-item--blue">Blue</div>
-        <div class="gcs-item gcs-item--purple">Purple</div>
-      </div>
-      <hr/>
-      <h2>Aligning and justifying content and items</h2>
-      <p>Align content and grid items relative to rows and columns.</p>
-      <div class="gcs-container gcs-container--ex-ten">
-        <div class="gcs-item">1</div>
-        <div class="gcs-item">2</div>
-        <div class="gcs-item">3</div>
-        <div class="gcs-item">4</div>
-        <div class="gcs-item">5</div>
-        <div class="gcs-item">6</div>
-      </div>
-      <hr/>
-    </div>
-    <div class="content__post-content">
-      <h3>Grid template areas</h3>
-      <p>Another way to build a layout is using grid-template-areas.</p>
-      <div class="gcs-container gcs-container--ex-eleven">
-        <div class="gcs-item gcs-item--red">1</div>
-        <div class="gcs-item gcs-item--blue">2</div>
-        <div class="gcs-item gcs-item--purple">3</div>
-        <div class="gcs-item gcs-item--orange">4</div>
-      </div>
-    </div>
+    .gcs-container--ex-one {
+      /* how many columns and their width by px */
+      grid-template-columns: 200px 200px 200px;
+      /* how many rows and their height by px */
+      grid-template-rows: 200px 50px;
+      /* the size of rows that have not been implicitly sized */
+      grid-auto-rows: 100px;
+      /* the size of space between columns */
+      grid-column-gap: 20px;
+      /* the size of space between rows */
+      grid-row-gap: 20px;
+      /* Shorthand for the size of space between rows AND columns */
+      /* grid-gap: 20px; */
+    }</code>
+  </pre>
+  <hr/>
+  <h3>Introducing the 'fr' unit</h3>
+  <p>The 'fr' unit can be used for flexible grids, fr is a fraction of space within grid container.</p>
+  <div class="gcs-container gcs-container--ex-two">
+    <div class="gcs-item">1</div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+    <div class="gcs-item">7</div>
+    <div class="gcs-item">8</div>
+  </div>
+  <p>A fr column will resize around a fixed column too!</p>
+  <hr/>
+  <h3>Repeat function</h3>
+  <p>We can use repeat() notation when our grid has a repeating pattern.</p>
+  <div class="gcs-container gcs-container--ex-three">
+    <div class="gcs-item">1</div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+    <div class="gcs-item">7</div>
+    <div class="gcs-item">8</div>
+  </div>
+  <hr/>
+  <h3>Minmax function</h3>
+  <p>The minmax() function is unique to CSS Grid, we can use it to specifify the min and max size of a grid track.</p>
+  <div class="gcs-container gcs-container--ex-four">
+    <div class="gcs-item">1<p>Hello World</p></div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+    <div class="gcs-item">7</div>
+    <div class="gcs-item">8</div>
+  </div>
+  <hr/>
+  <h3>Auto-placement</h3>
+  <p>A grid will place it's elements in default order unless we define the flow.</p>
+  <div class="gcs-container gcs-container--ex-five">
+    <div class="gcs-item">1</div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+    <div class="gcs-item">7</div>
+    <div class="gcs-item">8</div>
+  </div>
+  <hr/>
+  <h3>Order</h3>
+  <p>We can change the order of the elements displayed in the grid.</p>
+  <div class="gcs-container gcs-container--ex-order">
+    <div class="gcs-item">1</div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+    <div class="gcs-item">7</div>
+    <div class="gcs-item">8</div>
+  </div>
+  <p>Note: Changing the order of an element in CSS does not change it in the DOM, consider this when styling tabbed elements etc.</p>
+  <hr/>
+  <h3>Auto-fill</h3>
+  <p>auto-fill will create as many tracks as will fit in to the container. Any empty tracks will remain part of the grid.</p>
+  <div class="gcs-container gcs-container--ex-six">
+    <div class="gcs-item">1</div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+    <div class="gcs-item">7</div>
+    <div class="gcs-item">8</div>
+  </div>
+  <hr/>
+  <h3>Auto-fit</h3>
+  <p>auto-fit will create as many tracks as will fit in to the container but, unlike auto-fill, it will drop any empty tracks and fill the rest of the space left behind.</p>
+  <div class="gcs-container gcs-container--ex-seven">
+    <div class="gcs-item">1</div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+    <div class="gcs-item">7</div>
+    <div class="gcs-item">8</div>
+  </div>
+  <hr/>
+  <h3>Dense and location</h3>
+  <p>Dense will attempt to fill in gaps earlier in the grid if smaller items come up later and we can define the location of items and how far they span.</p>
+    <p>We can also move our items around the grid and make them span across multiple rows and columns.</p>
+  <div class="gcs-container gcs-container--ex-eight">
+    <div class="gcs-item gcs-item--blue">1</div>
+    <div class="gcs-item gcs-item--red">2</div>
+    <div class="gcs-item gcs-item--purple">3</div>
+    <div class="gcs-item gcs-item--orange">4</div>
+    <div class="gcs-item gcs-item--deep-purple">5</div>
+    <div class="gcs-item gcs-item--pink">6</div>
+    <div class="gcs-item gcs-item--blue">7</div>
+    <div class="gcs-item gcs-item--red">8</div>
+    <div class="gcs-item gcs-item--purple">9</div>
+    <div class="gcs-item gcs-item--orange">10</div>
+    <div class="gcs-item gcs-item--deep-purple">11</div>
+    <div class="gcs-item gcs-item--pink">12</div>
+    <div class="gcs-item gcs-item--blue">13</div>
+    <div class="gcs-item gcs-item--red">14</div>
+    <div class="gcs-item gcs-item--purple">15</div>
+    <div class="gcs-item gcs-item--orange">16</div>
+    <div class="gcs-item gcs-item--deep-purple">17</div>
+    <div class="gcs-item gcs-item--pink">18</div>
+    <div class="gcs-item gcs-item--blue">19</div>
+    <div class="gcs-item gcs-item--red">20</div>
+    <div class="gcs-item gcs-item--grey">grey</div>
+  </div>
+  <hr/>
+  <h3>Named lines</h3>
+  <p>Use named lines to define the lines between content and change their placement with media queries.</p>
+  <div class="gcs-container gcs-container--ex-nine">
+    <div class="gcs-item gcs-item--red">Red</div>
+    <div class="gcs-item gcs-item--blue">Blue</div>
+    <div class="gcs-item gcs-item--purple">Purple</div>
+  </div>
+  <hr/>
+  <h2>Aligning and justifying content and items</h2>
+  <p>Align content and grid items relative to rows and columns.</p>
+  <div class="gcs-container gcs-container--ex-ten">
+    <div class="gcs-item">1</div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+  </div>
+  <hr/>
+  <h3>Grid template areas</h3>
+  <p>Another way to build a layout is using grid-template-areas.</p>
+  <div class="gcs-container gcs-container--ex-eleven">
+    <div class="gcs-item gcs-item--red">1</div>
+    <div class="gcs-item gcs-item--blue">2</div>
+    <div class="gcs-item gcs-item--purple">3</div>
+    <div class="gcs-item gcs-item--orange">4</div>
   </div>
 </div>

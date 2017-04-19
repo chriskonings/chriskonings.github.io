@@ -6,11 +6,9 @@ date: 2012-04-06 21:35
 ---
 
 <div class="block block--large">
-  <h2>Currently</h2>
-  <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank"><h1 class="content__post-title">IBM Design</h1></a>
-  <p>
-    I'm a Designer and Front-End Developer with a background in web agency, freelance and lecturing.
-  </p>
+  <h1>
+    I'm a Designer and Front-End Developer with a background in web agency, freelance and lecturing. Currently <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank"><mark>IBM Design</mark></a>
+  </h1>
   <p>
     I write scalable and maintainable front-end code using HTML, CSS/SCSS, BEM, Javascript/jQuery, Wordpress, Angular 1.x, Unity3D and Git.
   </p>
@@ -22,9 +20,9 @@ date: 2012-04-06 21:35
   <ul class="post-list">
     {% for post in site.categories.work %}
       <li class="post-list__post">
-        <a title="{{ post.title | escape }}" class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">
+        <a title="{{ post.title | escape }}" class="post-list__link" href="{{ post.url | prepend: site.baseurl }}">
           <div class="post-list__content" style="background-image:url('{{ post.thumbnail }}');"></div>
-          <div class="post-list__post-title"><h3>{{ post.title | escape }}</h3></div>
+          <div class="post-list__title"><h3>{{ post.title | escape }}</h3></div>
         </a>
       </li>
     {% endfor %}
