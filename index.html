@@ -5,39 +5,28 @@ category: none
 date: 2012-04-06 21:35
 ---
 
-<div class="content__post content__post--line">
-  <div class="content__post-block content__post-block--hero">
-    <div class="content__post-half content__post-half--large">
-      <div class="content__post-content">
-        <h2>Currently</h2>
-        <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank"><h1 class="content__post-title">IBM Design</h1></a>
-        <div class="margin-m"></div>
-        <p>
-          I'm a Designer and Front-End Developer with a background in web agency, freelance and lecturing.
-        </p>
-        <p>
-          I write scalable and maintainable front-end code using HTML, CSS/SCSS, BEM, Javascript/jQuery, Wordpress, Angular 1.x, Unity3D and Git.
-        </p>
-        <p>
-          I design using Sketch, Photoshop, Illustrator, and Design Thinking.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="content__post-block">
-    <div class="content__post-full">
-      <div class="content__post-content">
-        <ul class="post-list">
-          {% for post in site.categories.work %}
-            <li class="post-list__post">
-              <a title="{{ post.title | escape }}" class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">
-                <div class="post-list__content" style="background-image:url('{{ post.thumbnail }}');"></div>
-                <div class="post-list__post-title"><h3>{{ post.title | escape }}</h3></div>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="block block--large">
+  <h2>Currently</h2>
+  <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank"><h1 class="content__post-title">IBM Design</h1></a>
+  <p>
+    I'm a Designer and Front-End Developer with a background in web agency, freelance and lecturing.
+  </p>
+  <p>
+    I write scalable and maintainable front-end code using HTML, CSS/SCSS, BEM, Javascript/jQuery, Wordpress, Angular 1.x, Unity3D and Git.
+  </p>
+  <p>
+    I design using Sketch, Photoshop, Illustrator, and Design Thinking.
+  </p>
+</div>
+<div class="block">
+  <ul class="post-list">
+    {% for post in site.categories.work %}
+      <li class="post-list__post">
+        <a title="{{ post.title | escape }}" class="post-list__post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <div class="post-list__content" style="background-image:url('{{ post.thumbnail }}');"></div>
+          <div class="post-list__post-title"><h3>{{ post.title | escape }}</h3></div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
