@@ -7,13 +7,14 @@
     <title>Chris Konings</title>
     <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" {% if current.length > 0 %}href=../assets/main.css"{% else %}href="../../assets/main.css"{% endif %}>
+    <link rel="stylesheet" {% if current.length > 0 %}href="../assets/main.css"{% else %}href="../../assets/main.css"{% endif %}>
+    <script {% if current.length > 0 %}src="../assets/prism.js"{% else %}src="../../assets/prism.js"{% endif %}></script>
   </head>
-  <body class="wrapper">
+  <body>
       <header class="header">
         <div class="header__name">
-          <a class="header__name-link" href="/">Chris Konings</a>
-          <span class="header__name-role">Design | Front-End</span>
+          <a class="header__link" href="/">Chris Konings</a>
+          <span class="header__role">Design | Front-End</span>
           <img class="header__emoji" src="../../assets/emoji.png" alt="emoji">
         </div>
         <nav class="nav-wrapper">

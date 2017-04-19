@@ -1,21 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,700');
 
-h1, h2, h3, h4, h5, h6 { font-family: $heading-font-family; font-weight: $heading-font-weight; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: 1.2;
+}
 
-h1 { font-size: 32px; font-size: 3.2rem; font-weight: 700;}
-h2 { font-size: 20px; font-size: 2.0rem; color: $alt-white-color; margin: 0.6em 0;}
-h3 { font-size: 14px; font-size: 1.4rem; margin: 0.6em 0; font-weight: 700; text-transform: uppercase;}
+h1 { font-size: 32px; font-size: 3.2rem; font-weight: 700; margin: 2rem 0;}
+h2 { font-size: 20px; font-size: 2.0rem; color: $alt-white-color; margin: 1.5rem 0;}
+h3 { font-size: 14px; font-size: 1.4rem; margin: 1rem 0; font-weight: 700; text-transform: uppercase;}
 
 p {
   line-height: 1.58;
-  margin: 0.5em auto;
+  margin: 1.5rem auto;
   display: block;
+  &:first-of-type {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
 }
 
 ul {
   list-style: disc;
   padding-left: 20px;
   line-height: 1.58;
+}
+
+small, .font-small {font-size: 0.75em;}
+
+mark {
+  background-color: #feffa4;
 }
 
 .italic { font-style: italic; }
@@ -44,3 +58,11 @@ ul {
 .small-line-height { line-height: 1.38; }
 .medium-line-height { line-height: 1.58; }
 .medium-line-height { line-height: 1.78; }
+
+hr {
+  margin: 50px auto;
+}
+
+.font-alt {
+  font-family: $secondary-font-family;
+}
