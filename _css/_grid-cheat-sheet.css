@@ -1,0 +1,321 @@
+.gcs-container {
+  display: grid;
+  background: #dedede;
+}
+
+.gcs-container .gcs-item {
+  color: #e7e3d8;
+  background: #5f7278;
+  text-align: center;
+  padding: .5em;
+}
+
+.gcs-container .gcs-item:nth-of-type(odd) {
+  background-color: #8a9a9a;
+}
+
+
+/* Defining A Grid */
+
+.gcs-container--ex-one {
+  /* how many columns and their width by px */
+  grid-template-columns: 200px 200px 200px;
+
+  /* how many rows and their height by px */
+  grid-template-rows: 200px 50px;
+
+  /* the size of rows that have not been implicitly sized */
+  grid-auto-rows: 100px;
+
+  /* the size of space between columns */
+  grid-column-gap: 20px;
+
+  /* the size of space between rows */
+  grid-row-gap: 20px;
+
+  /* Shorthand for the size of space between rows AND columns */
+  /* grid-gap: 20px; */
+}
+
+
+/* Introducing the fr unit */
+
+.gcs-container--ex-two {
+  /* how many columns and their width by fr */
+  grid-template-columns: 1fr 1fr 1fr;
+
+  grid-gap: 20px;
+}
+
+
+/* repeat function */
+
+.gcs-container--ex-three {
+  /* repeating a column of 1fr three times */
+  /*grid-template-columns: repeat(3, 1fr); */
+
+  /* repeating two columns of 2fr and 1fr four times */
+  grid-template-columns: repeat(4, 2fr 1fr);
+
+  /* fixed column of 500px and repeating two columns of 2fr and 1fr twice */
+  /*grid-template-columns: 500px repeat(2, 2fr 1fr); */
+
+  grid-gap: 20px;
+}
+
+
+/* minmax function */
+
+.gcs-container--ex-four {
+  /* a column with min width of 200px, max of 250px, and two columns of 1fr */
+  grid-template-columns: minmax(200px, 250px) 1fr 1fr;
+
+  /* size of rows that have not been implicitly set, minimum 50px, maximum auto - will size relative to content */
+  grid-auto-rows: minmax(50px, auto);
+
+  grid-gap: 20px;
+}
+
+
+/* Auto Placement */
+
+.gcs-container--ex-five {
+  grid-template-columns: repeat(4, 1fr);
+
+  /* place elements in order of columns */
+  grid-auto-flow: column;
+
+  /* place elements in order of rows */
+  /*grid-auto-flow: row;*/
+
+  grid-template-rows: repeat(2, minmax(100px, auto));
+  grid-gap: 20px;
+}
+
+
+/* Order */
+
+.gcs-container--ex-order {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, minmax(100px, auto));
+  grid-gap: 20px;
+}
+
+/* order second child as 1 */
+.gcs-container--ex-order div:nth-child(2) {
+  order: 1;
+}
+
+/* set order of other divs to below second child */
+.gcs-container--ex-order div {
+  order: 2;
+}
+
+
+/* Auto-fill */
+
+.gcs-container--ex-six {
+  /* repeat as many columns as will fit in container at a minimum size of 50px and max of 1fr */
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+
+  grid-gap: 20px;
+}
+
+
+ /* Auto-fit */
+
+.gcs-container--ex-seven {
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-rows: minmax(80px, auto);
+  grid-gap: 2px;
+}
+
+
+/* Dense and location */
+
+.gcs-container--ex-eight {
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-rows: minmax(80px, auto);
+  grid-gap: 2px;
+
+  /* Dense will fill the gaps in the grid */
+  grid-auto-flow: dense;
+}
+
+
+.gcs-container--ex-eight .gcs-item--red {
+  /* span two column tracks */
+  grid-column-end: span 3;
+
+  /* span two row tracks */
+  grid-row-end: span 3;
+}
+
+
+
+.gcs-container--ex-eight .gcs-item--orange {
+  /* span three column tracks */
+  grid-column-end: span 2;
+
+  /* span three row tracks */
+  grid-row-end: span 2;
+}
+
+.gcs-container--ex-eight .gcs-item--blue {
+  /* span three row tracks */
+  grid-row-end: span 3;
+}
+
+.gcs-container--ex-eight .gcs-item--grey {
+  /* place on row 2 */
+  grid-row: 1;
+
+  /* start at column line 1 and end at column line -1 "final line" */
+  grid-column: 1 / -1;
+}
+
+
+/* Named lines - not supported in SCSS */
+
+.gcs-container--ex-nine {
+  /* define 'content-start' line, one column of 1fr, and define 'content-end line */
+  grid-template-columns: [content-start] 1fr [content-end];
+
+  /* one row of auto, define 'content-start' line, one row of auto, and define 'content-end' line */
+  grid-template-rows: auto [content-start] auto [content-end];
+
+  grid-gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .gcs-container--ex-nine {
+    /* one column of 2fr, define 'content-start' line, one columne of 4fr, and define 'content-end' line */
+    grid-template-columns: 2fr [content-start] 4fr [content-end];
+  }
+}
+
+.gcs-container--ex-nine .purple {
+  /* place grid-column from 'content-start' line */
+  grid-column: content-start;
+
+  /* place grid-row from 'content-start' line */
+  grid-row: content-start;
+}
+
+
+/* Aligning and Justifying Grid */
+
+.gcs-container--ex-ten {
+  height: 300px;
+  grid-template-columns: 150px 150px 150px;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
+
+  /* align content along row axis */
+  justify-content: center;
+
+  /* align content along column axis */
+  align-content: center;
+
+  /* align items within their grid layout along row axis */
+  justify-items: stretch;
+
+  /* align items within their grid layout along column axis */
+  align-items: stretch;
+}
+
+
+/* Grid Template Areas */
+
+.gcs-container--ex-eleven .gcs-item--red {
+  /* grid area name of red */
+  grid-area: rd;
+}
+
+.gcs-container--ex-eleven .gcs-item--blue {
+  /* grid area name of blue */
+  grid-area: bl;
+}
+
+.gcs-container--ex-eleven .gcs-item--purple {
+  /* grid area name of purple */
+  grid-area: pr;
+}
+
+.gcs-container--ex-eleven .gcs-item--orange {
+  /* grid area name of orange */
+  grid-area: og;
+}
+
+.gcs-container--ex-eleven {
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
+
+  /* create grid template use defined items */
+  grid-template-areas:
+    "rd"
+    "bl"
+    "pr"
+    "og";
+}
+
+@media (min-width: 640px) {
+  .gcs-container--ex-eleven {
+    grid-template-columns: 1fr 4fr 1fr;
+
+    /* place items in grid template according to area layout */
+    grid-template-areas:
+      "rd  bl pr"
+      "rd bl pr"
+      "og og og";
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.gcs-item--grey {
+  background-color: #212121 !important;
+}
+
+.gcs-item--red {
+  background-color: #ff5252 !important;
+}
+
+.gcs-item--pink {
+  background-color: #ff4081 !important;
+}
+
+.gcs-item--purple {
+  background-color: #e040fb !important;
+}
+
+.gcs-item--deep-purple {
+  background-color: #7c4dff !important;
+}
+
+.gcs-item--orange {
+  background-color: #ff3d00 !important;
+}
+
+.gcs-item--blue {
+  background-color: #448aff !important;
+}
+
+.gcs-message {
+  background-color: red;
+  color: #f5f5f5;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@supports(display:grid) {
+  .gcs-message {
+    display: none;
+  }
+}

@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:400,700');
 
-h1, h2, h3, h4, h5, h6 { font-family: $heading-font-family; font-weight: $heading-font-weight; }
 
-h1 { font-size: 32px; font-size: 3.2rem; font-weight: 700;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 { font-size: 32px; font-size: 3.2rem; font-weight: 700; margin-top: 0;}
 h2 { font-size: 20px; font-size: 2.0rem; color: $alt-white-color; margin: 0.6em 0;}
 h3 { font-size: 14px; font-size: 1.4rem; margin: 0.6em 0; font-weight: 700; text-transform: uppercase;}
 
@@ -17,6 +24,8 @@ ul {
   padding-left: 20px;
   line-height: 1.58;
 }
+
+small, .font-small {font-size: 0.75em;}
 
 .italic { font-style: italic; }
 .bold   { font-weight: 900; }
@@ -44,3 +53,11 @@ ul {
 .small-line-height { line-height: 1.38; }
 .medium-line-height { line-height: 1.58; }
 .medium-line-height { line-height: 1.78; }
+
+hr {
+  margin: 50px auto;
+}
+
+.font-alt {
+  font-family: $secondary-font-family;
+}
