@@ -21,7 +21,6 @@ a {
 ::-moz-selection { color: #f9f9f9; background: #000; }
 ::selection { color: #f9f9f9; background: #000; }
 
-
 .button {
   text-decoration: none;
   display: inline-block;
@@ -40,7 +39,7 @@ a {
   margin: .3em 0;
 }
 
-.wrapper {
+body {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -68,7 +67,7 @@ a {
   position: relative;
 }
 
-.content {
+main {
   margin: 0 20px 80px 20px;
   animation: fadein 1s;
 }
@@ -88,21 +87,22 @@ a {
   }
 }
 
-.content__post {
+.post {
   max-width: 960px;
   margin: 50px auto;
   position: relative;
+  &::after {
+  content: "";
+  display: table;
+  clear: both;
+  }
   @media only screen and (min-width: 960px) {
     margin: 50px auto 0 auto;
   }
 }
 
-.content__post--line::before {
-  content: '';
-  position: absolute;
-}
 
-.content__post-details {
+.post__details {
   padding: 5px 0;
   border-top: 2px solid $body-color;
 }
@@ -119,16 +119,12 @@ a {
   overflow: hidden;
 }
 
-.content__post-content {
-  margin-top: 1.5em;
-}
-
 .content__post-date {
   color: #7d7d7d;
   margin: 5px auto 30px auto;
 }
 
-.content__nav {
+.post__nav {
   width: 100%;
   margin: 0 auto;
   max-width: 960px;
@@ -136,13 +132,13 @@ a {
   display: flex;
 }
 
-.content__nav-prev {
+.post__nav-prev {
   flex: 1;
   text-decoration: none;
   text-align: left;
 }
 
-.content__nav-next {
+.post__nav-next {
   flex: 1;
   text-decoration: none;
   text-align: right;
@@ -163,32 +159,21 @@ a {
   margin-bottom: 1em;
 }
 
-.content__post-full {
+.block {
   display: block;
   height: auto;
   width: 99%;
-  margin: 0.5%;
+  margin: 2em 0;
 }
 
-.content__post-half {
-  display: block;
-  height: auto;
-  width: 99%;
-  margin: 0.5%;
+.block--half {
   @media only screen and (min-width: 960px) {
-    width: 49%;
-    margin: 0.5%;
+    width: 50%;
     float: left;
   }
 }
 
-.content__post-half--small {
-  @media only screen and (min-width: 960px) {
-    width: 38%;
-  }
-}
-
-.content__post-half--large {
+.block--large {
   @media only screen and (min-width: 960px) {
     width: 59%;
   }
@@ -200,6 +185,9 @@ a {
     width: 54%
   }
 }
+
+
+
 
 .content__post-half--no-margin {
   margin: 0;
@@ -358,7 +346,6 @@ a {
 .post-list {
   list-style: none;
   padding: 0;
-  margin: auto -.5%;
 }
 
 .post-list--post {
@@ -377,7 +364,7 @@ a {
   float:left;
   width: 99%;
   padding-bottom: 99%; /* = width for a 1:1 aspect ratio */
-  margin: 0.5%;
+  //margin: 0.5%;
   //margin: 0.5%;
   // background-color: #efefef;
   overflow:hidden;
@@ -387,19 +374,19 @@ a {
   @media only screen and (min-width: 640px) {
     width: 32.33%;
     padding-bottom: 32.33%; /* = width for a 1:1 aspect ratio */
-    margin: 0.5%;
+    //margin: 0.5%;
   }
 
   @media only screen and (min-width: 960px) {
     width: 32.33%;
     padding-bottom: 32.33%; /* = width for a 1:1 aspect ratio */
-    margin: 0.5%;
+    //margin: 0.5%;
   }
 
   @media only screen and (min-width: 1280px) {
     width: 24%;
     padding-bottom: 24%;
-    margin: 0.5%;
+    //margin: 0.5%;
   }
 
   @media only screen
@@ -408,7 +395,7 @@ a {
   and (-webkit-min-device-pixel-ratio: 2) {
     width: 99%;
     padding-bottom: 99%; /* = width for a 1:1 aspect ratio */
-    margin: 0.5%;
+    //margin: 0.5%;
   }
 }
 
