@@ -327,16 +327,12 @@ permalink: /css-grid-cheat-sheet/
       grid-template-columns: 150px 150px 150px;
       grid-auto-rows: minmax(100px, auto);
       grid-gap: 20px;
-
       /* align content along row axis */
       justify-content: center;
-
       /* align content along column axis */
       align-content: center;
-
       /* align items within their grid layout along row axis */
       justify-items: stretch;
-
       /* align items within their grid layout along column axis */
       align-items: stretch;
     }</code>
@@ -368,20 +364,19 @@ permalink: /css-grid-cheat-sheet/
       grid-area: og;
     }
     .container {
-    grid-auto-rows: minmax(100px, auto);
-    grid-gap: 20px;
-
-    /* create grid template use defined items */
-    grid-template-areas:
-      "rd"
-      "bl"
-      "pr"
-      "og";
+      display: grid;
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: 20px;
+      /* create grid template use defined items */
+      grid-template-areas:
+        "rd"
+        "bl"
+        "pr"
+        "og";
     }
     @media (min-width: 640px) {
       .container {
         grid-template-columns: 1fr 4fr 1fr;
-
         /* place items in grid template according to area layout */
         grid-template-areas:
           "rd  bl pr"

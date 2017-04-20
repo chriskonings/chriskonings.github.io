@@ -192,7 +192,7 @@
   }
 }
 
-.gcs-container--ex-nine .purple {
+.gcs-container--ex-nine .gcs-item--purple {
   /* place grid-column from 'content-start' line */
   grid-column: content-start;
 
