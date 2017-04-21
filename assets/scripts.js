@@ -2,6 +2,6 @@
 //   var accordion = document.querySelector('.accordion');
 //   accordion.querySelector('.accordion__button').addEventListener("click", function(){
 //     var content = this.nextElementSibling;
-//     console.log(content);
+//     content.classList.toggle('accordion__content--open');
 //   }, false);
 // });

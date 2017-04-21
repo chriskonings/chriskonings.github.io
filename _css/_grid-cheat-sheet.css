@@ -5,7 +5,7 @@
 }
 
 .gcs-container .gcs-item {
-  color: #e7e3d8;
+  color: #fff;
   background: #5f7278;
   text-align: center;
   padding: .5em;
@@ -128,7 +128,32 @@
 .gcs-container--ex-seven {
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   grid-auto-rows: minmax(80px, auto);
-  grid-gap: 2px;
+  grid-gap: 5px;
+}
+
+/* Location and Span */
+
+.gcs-container--ex-location {
+ grid-template-columns: repeat(8, 1fr);
+ grid-auto-rows: minmax(50px, auto);
+ grid-gap: 5px;
+}
+
+.gcs-container--ex-location .gcs-item:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+
+.gcs-container--ex-location .gcs-item:nth-child(4) {
+  grid-column-start: 5;
+  grid-row-start: span 3;
+}
+
+.gcs-container--ex-location .gcs-item:nth-child(8) {
+  grid-row: 4;
+  grid-column: 1 / -1;
 }
 
 
@@ -164,15 +189,6 @@
   grid-row-end: span 3;
 }
 
-.gcs-container--ex-eight .gcs-item--grey {
-  /* place on row 2 */
-  grid-row: 1;
-
-  /* start at column line 1 and end at column line -1 "final line" */
-  grid-column: 1 / -1;
-}
-
-
 /* Named lines - not supported in SCSS */
 
 .gcs-container--ex-nine {
@@ -192,7 +208,7 @@
   }
 }
 
-.gcs-container--ex-nine .gcs-item--purple {
+.gcs-container--ex-nine .gcs-item--orange {
   /* place grid-column from 'content-start' line */
   grid-column: content-start;
 
@@ -235,9 +251,9 @@
   grid-area: bl;
 }
 
-.gcs-container--ex-eleven .gcs-item--purple {
-  /* grid area name of purple */
-  grid-area: pr;
+.gcs-container--ex-eleven .gcs-item--black {
+  /* grid area name of black */
+  grid-area: bk;
 }
 
 .gcs-container--ex-eleven .gcs-item--orange {
@@ -253,7 +269,7 @@
   grid-template-areas:
     "rd"
     "bl"
-    "pr"
+    "bk"
     "og";
 }
 
@@ -263,8 +279,8 @@
 
     /* place items in grid template according to area layout */
     grid-template-areas:
-      "rd  bl pr"
-      "rd bl pr"
+      "rd  bl bk"
+      "rd bl bk"
       "og og og";
   }
 }
@@ -273,12 +289,12 @@
   display: none !important;
 }
 
-.gcs-item--grey {
+.gcs-item--black {
   background-color: #212121 !important;
 }
 
 .gcs-item--red {
-  background-color: #ff5252 !important;
+  background-color: #ff6d6d !important;
 }
 
 .gcs-item--pink {
@@ -286,19 +302,15 @@
 }
 
 .gcs-item--purple {
-  background-color: #e040fb !important;
-}
-
-.gcs-item--deep-purple {
-  background-color: #7c4dff !important;
+  background-color: #de98ea !important;
 }
 
 .gcs-item--orange {
-  background-color: #ff3d00 !important;
+  background-color: #fd8c69 !important;
 }
 
 .gcs-item--blue {
-  background-color: #448aff !important;
+  background-color: #80a0d6 !important;
 }
 
 .gcs-message {
