@@ -133,8 +133,61 @@ permalink: /css-grid-cheat-sheet/
     }</code>
   </pre>
   <hr/>
+  <h3>Location and Span</h3>
+  <p>We can build our grid using our items to create implicit rows and then move or scale them using <code class="language-css">grid-column-start</code> and <code class="language-css">grid-row-start</code> to define where the item starts then <code class="language-css">grid-column-end</code> and <code class="language-css">grid-row-end</code> to define where the item ends. We can also write this in shorthand using <code class="language-css">grid-column</code> and <code class="language-css">grid-row</code>.</p>
+  <div class="gcs-container gcs-container--ex-location">
+    <div class="gcs-item">1</div>
+    <div class="gcs-item">2</div>
+    <div class="gcs-item">3</div>
+    <div class="gcs-item">4</div>
+    <div class="gcs-item">5</div>
+    <div class="gcs-item">6</div>
+    <div class="gcs-item">7</div>
+    <div class="gcs-item">8</div>
+  </div>
+  <pre class="line-numbers">
+    <code class="language-css">.container {
+     grid-template-columns: repeat(8, 1fr);
+     grid-auto-rows: minmax(50px, auto);
+     grid-gap: 5px;
+    }
+
+    /* second item selector  */
+    .item:nth-child(2) {
+      /* start item from column 2 */
+      grid-column-start: 2;
+
+      /* end item on span of 2 columns */
+      grid-column-end: span 2;
+
+      /* start item on row 1 */
+      grid-row-start: 1;
+
+      /* end item on span of 2 rows */
+      grid-row-end: span 2;
+    }
+
+    /* fourth item selector */
+    .tem:nth-child(4) {
+      /* start item from column 5*/
+      grid-column-start: 5;
+
+      /* start item on span of 3 rows */
+      grid-row-start: span 3;
+    }
+
+    /* eight item selector */
+    .item:nth-child(8) {
+      /* move item to row 4 */
+      grid-row: 4;
+
+      /* start item on column 1 and end on last column (-1) */
+      grid-column: 1 / -1;
+    }</code>
+  </pre>
+  <hr/>
   <h3>Auto-placement</h3>
-  <p>A grid will place it's elements in default order unless we define the flow.</p>
+  <p>A grid will place it's items automatically in rows unless we define the flow, we can change the flow with <code class="language-css">grid-auto-flow: column;</code> to place items by column instead.</p>
   <div class="gcs-container gcs-container--ex-five">
     <div class="gcs-item">1</div>
     <div class="gcs-item">2</div>
@@ -159,6 +212,51 @@ permalink: /css-grid-cheat-sheet/
       grid-template-rows: repeat(2, minmax(100px, auto));
       grid-gap: 20px;
     }</code>
+  </pre>
+  <hr/>
+  <h3>Dense</h3>
+  <p>Along with column and row we can use the 'dense' keyword, <code class="language-css">grid-auto-flow: dense;</code> will attempt to fill in gaps earlier in the grid if smaller items come up later.</p>
+  <div class="gcs-container gcs-container--ex-eight">
+    <div class="gcs-item gcs-item--blue">1</div>
+    <div class="gcs-item gcs-item--red">2</div>
+    <div class="gcs-item gcs-item--orange">4</div>
+    <div class="gcs-item gcs-item--blue">7</div>
+    <div class="gcs-item gcs-item--red">8</div>
+    <div class="gcs-item gcs-item--orange">10</div>
+    <div class="gcs-item gcs-item--blue">13</div>
+    <div class="gcs-item gcs-item--red">14</div>
+    <div class="gcs-item gcs-item--orange">16</div>
+    <div class="gcs-item gcs-item--blue">19</div>
+    <div class="gcs-item gcs-item--red">20</div>
+    <div class="gcs-item">21</div>
+    <div class="gcs-item">22</div>
+    <div class="gcs-item">23</div>
+    <div class="gcs-item">24</div>
+    <div class="gcs-item">25</div>
+    <div class="gcs-item">26</div>
+  </div>
+  <pre class="line-numbers">
+    <code class="language-css">.container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      grid-auto-rows: minmax(80px, auto);
+      grid-gap: 2px;
+
+      /* Dense will fill the gaps in the grid */
+      grid-auto-flow: dense;
+    }
+    .red {
+      grid-column-end: span 3;
+      grid-row-end: span 3;
+    }
+    .orange {
+      grid-column-end: span 2;
+      grid-row-end: span 2;
+    }
+    .blue {
+      grid-row-end: span 3;
+    }
+  </code>
   </pre>
   <hr/>
   <h3>Order</h3>
@@ -239,91 +337,9 @@ permalink: /css-grid-cheat-sheet/
     }</code>
   </pre>
   <hr/>
-  <h3>Location and Span</h3>
-  <p>We can build our grid using our items to create implicit rows and then move or scale them using <code class="language-css">grid-column-start</code> and <code class="language-css">grid-row-start</code> to define where the item starts then <code class="language-css">grid-column-end</code> and <code class="language-css">grid-row-end</code> to define where the item ends. We can also write this in shorthand using <code class="language-css">grid-column</code> and <code class="language-css">grid-row</code>.</p>
-  <div class="gcs-container gcs-container--ex-location">
-    <div class="gcs-item">1</div>
-    <div class="gcs-item">2</div>
-    <div class="gcs-item">3</div>
-    <div class="gcs-item">4</div>
-    <div class="gcs-item">5</div>
-    <div class="gcs-item">6</div>
-    <div class="gcs-item">7</div>
-    <div class="gcs-item">8</div>
-  </div>
-  <pre class="line-numbers">
-    <code class="language-css">.container {
-     grid-template-columns: repeat(8, 1fr);
-     grid-auto-rows: minmax(50px, auto);
-     grid-gap: 5px;
-    }
-
-    .item:nth-child(2) {
-      grid-column-start: 2;
-      grid-column-end: span 2;
-      grid-row-start: 1;
-      grid-row-end: span 2;
-    }
-
-    .tem:nth-child(4) {
-      grid-column-start: 5;
-      grid-row-start: span 3;
-    }
-
-    .item:nth-child(8) {
-      grid-row: 4;
-      grid-column: 1 / -1;
-    }</code>
-  </pre>
-  <hr/>
-  <h3>Dense</h3>
-  <p>By using <code class="language-css">grid-auto-flow: dense;</code> will attempt to fill in gaps earlier in the grid if smaller items come up later and we can define the location of items and how far they span.</p>
-    <p>We can also move our items around the grid and make them span across multiple rows and columns.</p>
-  <div class="gcs-container gcs-container--ex-eight">
-    <div class="gcs-item gcs-item--blue">1</div>
-    <div class="gcs-item gcs-item--red">2</div>
-    <div class="gcs-item gcs-item--orange">4</div>
-    <div class="gcs-item gcs-item--blue">7</div>
-    <div class="gcs-item gcs-item--red">8</div>
-    <div class="gcs-item gcs-item--orange">10</div>
-    <div class="gcs-item gcs-item--blue">13</div>
-    <div class="gcs-item gcs-item--red">14</div>
-    <div class="gcs-item gcs-item--orange">16</div>
-    <div class="gcs-item gcs-item--blue">19</div>
-    <div class="gcs-item gcs-item--red">20</div>
-    <div class="gcs-item">21</div>
-    <div class="gcs-item">22</div>
-    <div class="gcs-item">23</div>
-    <div class="gcs-item">24</div>
-    <div class="gcs-item">25</div>
-    <div class="gcs-item">26</div>
-  </div>
-  <pre class="line-numbers">
-    <code class="language-css">.container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-      grid-auto-rows: minmax(80px, auto);
-      grid-gap: 2px;
-
-      /* Dense will fill the gaps in the grid */
-      grid-auto-flow: dense;
-    }
-    .red {
-      grid-column-end: span 3;
-      grid-row-end: span 3;
-    }
-    .orange {
-      grid-column-end: span 2;
-      grid-row-end: span 2;
-    }
-    .blue {
-      grid-row-end: span 3;
-    }
-  </code>
-  </pre>
-  <hr/>
   <h3>Named lines</h3>
-  <p>Use named lines to define the lines between content and change their placement with media queries.</p>
+  <p>Instead of using numbers to define where our items are placed, start and end we can define lines that draw out boundaries throughout our grid. <code class="language-css">grid-template-columns: [content-start] 1fr [content-end];</code> creates one flexible column with named lines at the beginning and the end of the column. So when we write <code class="language-css">grid-column: content-start;</code> on an item we are saying we want that item to begin/move to the column named line 'content-start'.
+    Use named lines to define the lines between content and change their placement with media queries.</p>
   <div class="gcs-container gcs-container--ex-nine">
     <div class="gcs-item gcs-item--red">Red</div>
     <div class="gcs-item gcs-item--blue">Blue</div>
@@ -356,7 +372,7 @@ permalink: /css-grid-cheat-sheet/
   </pre>
   <hr/>
   <h2>Aligning and justifying content and items</h2>
-  <p>Align content and grid items relative to rows and columns.</p>
+  <p>Like flex we can align content and grid items relative to rows and columns.</p>
   <div class="gcs-container gcs-container--ex-ten">
     <div class="gcs-item">1</div>
     <div class="gcs-item">2</div>
@@ -388,7 +404,7 @@ permalink: /css-grid-cheat-sheet/
   </pre>
   <hr/>
   <h3>Grid template areas</h3>
-  <p>Another way to build a layout is using grid-template-areas.</p>
+  <p>Another way to build a layout is using <code class="language-css">grid-template-areas</code>. We can assign items grid-areas, so <code class="language-css">grid-area: rd;</code> will assign the item grid-area to "rd", we can then build out our layout using <code class="language-css">grid-template-areas:"rd";</code>. With multiple items assigned grid-areas the layout can be shaped and our items can span across columns and rows using ascii-style <code class="language-css">grid-template-areas</code>.</p>
   <div class="gcs-container gcs-container--ex-eleven">
     <div class="gcs-item gcs-item--red">1</div>
     <div class="gcs-item gcs-item--blue">2</div>
