@@ -57,7 +57,7 @@ permalink: /css-grid-cheat-sheet/
       /* grid-gap: 20px; */
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Introducing the 'fr' unit</h3>
   <p>The 'fr' unit can be used for flexible grids, 'fr' is a fraction of space within the grid container. So when we write <code class="language-css">grid-template-columns: 1fr 1fr 1fr;</code> we are creating three columns of equal size that will change based on the viewport size. An 'fr' column will also resize around a fixed column.</p>
   <div class="gcs-container gcs-container--ex-two">
@@ -80,9 +80,9 @@ permalink: /css-grid-cheat-sheet/
       grid-gap: 20px;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Repeat function</h3>
-  <p>If our grid has a repeating patterns we can use <code class="language-css">repeat()</code> to create multiple columns at once or even repeat a set of columns.</p>
+  <p>If our grid has repeating patterns we can use <code class="language-css">repeat()</code> to create multiple columns at once or even repeat a set of columns.</p>
   <div class="gcs-container gcs-container--ex-three">
     <div class="gcs-item">1</div>
     <div class="gcs-item">2</div>
@@ -106,7 +106,7 @@ permalink: /css-grid-cheat-sheet/
       grid-gap: 20px;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Minmax function</h3>
   <p>With <code class="language-css">minmax()</code> we can specify the minimum and maximum size of a grid track. So, if we want our rows to always be at least 50px in height but still resize based on content we can write <code class="language-css">grid-auto-rows: minmax(50px, auto);</code>.</p>
   <div class="gcs-container gcs-container--ex-four">
@@ -132,7 +132,7 @@ permalink: /css-grid-cheat-sheet/
       grid-gap: 20px;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Location and Span</h3>
   <p>We can build our grid using our items to create implicit rows and then move or scale them using <code class="language-css">grid-column-start</code> and <code class="language-css">grid-row-start</code> to define where the item starts then <code class="language-css">grid-column-end</code> and <code class="language-css">grid-row-end</code> to define where the item ends. We can also write this in shorthand using <code class="language-css">grid-column</code> and <code class="language-css">grid-row</code>.</p>
   <div class="gcs-container gcs-container--ex-location">
@@ -185,7 +185,7 @@ permalink: /css-grid-cheat-sheet/
       grid-column: 1 / -1;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Auto-placement</h3>
   <p>A grid will place it's items automatically in rows unless we define the flow, we can change the flow with <code class="language-css">grid-auto-flow: column;</code> to place items by column instead.</p>
   <div class="gcs-container gcs-container--ex-five">
@@ -213,7 +213,7 @@ permalink: /css-grid-cheat-sheet/
       grid-gap: 20px;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Dense</h3>
   <p>Along with column and row we can use the 'dense' keyword, <code class="language-css">grid-auto-flow: dense;</code> will attempt to fill in gaps earlier in the grid if smaller items come up later.</p>
   <div class="gcs-container gcs-container--ex-eight">
@@ -258,7 +258,7 @@ permalink: /css-grid-cheat-sheet/
     }
   </code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Order</h3>
   <p>We can change the order of the elements displayed in the grid, if we want our first item in the DOM to be last in the grid then we would set all the items to <code class="language-css">order: 1;</code> and our first item to <code class="language-css">order: 2;</code>. However, changing the order of an element in CSS does not change it in the DOM, consider this when styling tabbed elements etc.</p>
   <div class="gcs-container gcs-container--ex-order">
@@ -289,7 +289,7 @@ permalink: /css-grid-cheat-sheet/
       order: 2;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Auto-fill</h3>
   <p>Using <code class="language-css">auto-fill</code> will create as many tracks as will fit in to the container, any empty tracks will remain part of the grid. So we have 8 items below but because we have used <code class="language-css">auto-fill</code> with a minimum column size of 50px we have space left over because <code class="language-css">auto-fill</code> has created tracks that we do not have content for.</p>
   <div class="gcs-container gcs-container--ex-six">
@@ -312,7 +312,7 @@ permalink: /css-grid-cheat-sheet/
       grid-gap: 20px;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Auto-fit</h3>
   <p>Using <code class="language-css">auto-fit</code> will create as many tracks as will fit in to the container but, unlike <code class="language-css">auto-fill</code>, it will drop any empty tracks and fill the rest of the space left behind. So our 8 items now fill the tracks created and any empty tracks are gone, leaving the 8 to fill the container.</p>
   <div class="gcs-container gcs-container--ex-seven">
@@ -336,7 +336,7 @@ permalink: /css-grid-cheat-sheet/
       grid-gap: 5px;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Named lines</h3>
   <p>Instead of using numbers to define where our items are placed, start and end we can define lines that draw out boundaries throughout our grid. <code class="language-css">grid-template-columns: [content-start] 1fr [content-end];</code> creates one flexible column with named lines at the beginning and the end of the column. So when we write <code class="language-css">grid-column: content-start;</code> on an item we are saying we want that item to begin/move to the column named line 'content-start'.
     Use named lines to define the lines between content and change their placement with media queries.</p>
@@ -370,7 +370,7 @@ permalink: /css-grid-cheat-sheet/
       grid-row: content-start;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Aligning and justifying content/items</h3>
   <p>Like flex we can align content and grid items relative to rows and columns.</p>
   <div class="gcs-container gcs-container--ex-ten">
@@ -402,7 +402,7 @@ permalink: /css-grid-cheat-sheet/
       align-items: stretch;
     }</code>
   </pre>
-  <hr/>
+  <hr />
   <h3>Grid template areas</h3>
   <p>Another way to build a layout is using <code class="language-css">grid-template-areas</code>. We can assign items grid-areas, so <code class="language-css">grid-area: rd;</code> will assign the item grid-area to "rd", we can then build out our layout using <code class="language-css">grid-template-areas:"rd";</code>. With multiple items assigned grid-areas the layout can be shaped and our items can span across columns and rows using ascii-style <code class="language-css">grid-template-areas</code>.</p>
   <div class="gcs-container gcs-container--ex-eleven">
