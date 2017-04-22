@@ -16,6 +16,8 @@ html {
 }
 
 body {
+  animation: fadein 1s ease;
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -37,7 +39,6 @@ body {
 }
 
 main {
-  animation: fadein 1s ease;
   margin: 20px 50px;
 }
 
@@ -144,6 +145,10 @@ a {
   @media only screen and (min-width: 960px) {
     width: 59%;
   }
+}
+
+.block--rise {
+  animation: riseup 1s ease;
 }
 
 .content__post-half--margin-left {
@@ -275,7 +280,6 @@ a {
 .post-list {
   list-style: none;
   padding: 0;
-  animation: riseup 1s ease;
 }
 
 .post-list__post {
