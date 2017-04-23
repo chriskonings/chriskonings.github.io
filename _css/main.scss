@@ -16,8 +16,6 @@ html {
 }
 
 body {
-  animation: fadein 1s ease;
-
   position: relative;
   display: flex;
   flex-direction: column;
@@ -29,17 +27,17 @@ body {
   font-size: $body-font-size-rem;
   -webkit-overflow-scrolling: touch;
   &::before {
-    content: '';
-    background: $body-color;
+    //content: '';
     width: 5px;
     height: 100%;
+    width: 100%;
     position: absolute;
-
+    border: 10px solid $body-color;
   }
 }
 
 main {
-  margin: 20px 50px;
+  margin: 0 auto;
 }
 
 a {
@@ -73,31 +71,50 @@ a {
   margin: .3em 0;
 }
 
-.page {
-  max-width: 960px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.page--home {
-  padding: 0;
-  @media only screen and (min-width: 960px) {
-    padding-top: 60px;
-  }
-}
-
 .post {
   max-width: 960px;
-  margin: 50px auto;
   position: relative;
+  padding: 0 20px 80px 20px;
+  box-shadow: 0 0 30px -5px rgba(185, 185, 185, 0.75);
+  &::after, &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
   @media only screen and (min-width: 960px) {
-    margin: 50px auto 0 auto;
+    padding: 0 50px 80px 50px;
+  }
+  @media only screen and (min-width: 750px) {
+    margin: 20px;
   }
 }
 
+.page {
+  @extend .post;
+  box-shadow: none;
+}
+
+// .page--home {
+//   padding: 20px 20px 80px 20px;
+//   @media only screen and (min-width: 960px) {
+//     padding: 50px 50px 80px 50px;
+//   }
+// }
+
+
+// .post {
+//   max-width: 960px;
+//   padding: 0 20px 80px 20px;
+//   position: relative;
+//   box-shadow: 0 0 70px -5px rgba(185, 185, 185, 0.75);
+//   @media only screen and (min-width: 750px) {
+//     margin: 50px;
+//   }
+// }
+
 .post__details {
-  padding: 5px 0;
-  border-top: 2px solid $body-color;
+  padding: 20px 0;
+  border-bottom: 2px solid lighten($body-color, 80%);;
 }
 
 .post__nav {
@@ -147,7 +164,43 @@ a {
   }
 }
 
-.block--rise {
+.block--home-hero {
+  position: relative;
+  //margin: 5vh 0;
+  //padding-top: 2em;
+  @media only screen and (min-width: 960px) {
+    min-height: 80vh;
+  }
+}
+
+.home-picture {
+  display: none;
+  @media only screen and (min-width: 960px) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.hero-list {
+  display: none;
+  width: 100%;
+  text-align: center;
+  content: 'down';
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  li {
+    margin: 0 5px;
+    display: inline-block;
+  }
+  @media only screen and (min-width: 960px) {
+    display: block;
+  }
+}
+
+.anim-rise {
   animation: riseup 1s ease;
 }
 
@@ -185,7 +238,7 @@ a {
   position: relative;
   @media only screen and (min-width: 750px) {
     display: flex;
-    height: 70px;
+    height: 10vh;
     padding: 0 20px;
     flex-direction: row;
   }
@@ -285,33 +338,34 @@ a {
 .post-list__post {
   position: relative;
   float:left;
-  width: 99%;
-  padding-bottom: 99%; /* = width for a 1:1 aspect ratio */
+  width: 98%;
+  padding-bottom: 98%; /* = width for a 1:1 aspect ratio */
   overflow:hidden;
   background-position: center;
   background-size: cover;
+  margin: .5%;
 
   @media only screen and (min-width: 640px) {
-    width: 33.33%;
-    padding-bottom: 33.33%; /* = width for a 1:1 aspect ratio */
+    width: 32.33%;
+    padding-bottom: 32.33%; /* = width for a 1:1 aspect ratio */
   }
 
   @media only screen and (min-width: 960px) {
-    width: 33.33%;
-    padding-bottom: 33.33%; /* = width for a 1:1 aspect ratio */
+    width: 32.33%;
+    padding-bottom: 3.33%; /* = width for a 1:1 aspect ratio */
   }
 
   @media only screen and (min-width: 1280px) {
-    width: 25%;
-    padding-bottom: 25%;
+    width: 24%;
+    padding-bottom: 24%;
   }
 
   @media only screen
   and (min-device-width: 320px)
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    width: 99%;
-    padding-bottom: 99%; /* = width for a 1:1 aspect ratio */
+    width: 98%;
+    padding-bottom: 98%; /* = width for a 1:1 aspect ratio */
   }
 }
 

@@ -5,18 +5,36 @@ category: none
 date: 2012-04-06 21:35
 ---
 
-<div class="block block--large block--rise">
-  <h1>
-    I'm a Designer and Front-End Developer with a background in web agency, freelance and lecturing. Currently <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank"><mark>IBM Design</mark></a>
-  </h1>
-  <p>
-    I write scalable and maintainable front-end code using HTML, CSS/SCSS, BEM, Javascript/jQuery, Wordpress, Angular 1.x, Unity3D and Git.
-  </p>
-  <p>
-    I design using Sketch, Photoshop, Illustrator, and Design Thinking.
-  </p>
+
+
+
+<div class="block block--rise block--home-hero">
+  <div class="block block--half">
+    <img class="home-picture" src="../assets/me.jpg">
+  </div>
+
+
+  <div class="block block--half">
+    <h1>
+      I'm a Designer and Front-End Developer with a background in web agency, freelance and lecturing. Currently <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank"><mark>IBM Design</mark></a>
+    </h1>
+    <p>
+      I write scalable and maintainable front-end code using HTML, CSS/SCSS, BEM, Javascript/jQuery, Wordpress, Angular 1.x, Unity3D and Git.
+    </p>
+    <p>
+      I design using Sketch, Photoshop, Illustrator, and Design Thinking.
+    </p>
+    <div class="hero-list">
+      <ul>
+        <li><a href="#work" title="Work">Work</a></li>
+        <li><a href="#explore" title="Explore">Explore</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
-<div class="block block--rise">
+
+<div class="block block--rise" id="work">
+  <h3>Work</h3>
   <ul class="post-list">
     {% for post in site.categories.work %}
       <li class="post-list__post">
@@ -26,5 +44,15 @@ date: 2012-04-06 21:35
         </a>
       </li>
     {% endfor %}
+  </ul>
+</div>
+<div class="block block--rise" id="explore">
+  <h3>Explore</h3>
+  <ul class="no-list-style large-list">
+    <li><a href="/css-grid-cheat-sheet" title="CSS Grid Cheat Sheet" target="_blank">CSS Grid Cheat Sheet</a></li>
+    <li><a href="https://blog.prototypr.io/how-to-move-beyond-design-tools-68fdf2a1a9bc" title="How To Move Beyond Design Tools" target="_blank">How To Move Beyond Design Tools</a></li>
+    <li><a href="http://codepen.io/chriskonings/pen/oZXrZe" title="Open Letter Animation" target="_blank">Open Letter Animation</a></li>
+    <li><a href="http://chriskonings.com/html" title="HTML and related conventions" target="_blank">The Importance Of Semantic HTML</a></li>
+    <li><a href="http://chriskonings.com/bem" title="BEM" target="_blank">Writing Maintainable Code Using BEM</a></li>
   </ul>
 </div>
