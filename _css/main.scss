@@ -174,7 +174,7 @@ a {
 }
 
 .home-picture {
-  width: 250px;
+  max-width: 250px;
   display: block;
   margin: 0 auto;
   @media only screen and (min-width: 960px) {
