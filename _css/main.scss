@@ -166,17 +166,18 @@ a {
 
 .block--home-hero {
   position: relative;
-  //margin: 5vh 0;
-  //padding-top: 2em;
+  padding: 0;
   @media only screen and (min-width: 960px) {
     min-height: 80vh;
+    padding: .5em;
   }
 }
 
 .home-picture {
-  display: none;
+  width: 250px;
+  display: block;
+  margin: 0 auto;
   @media only screen and (min-width: 960px) {
-    display: block;
     width: 100%;
   }
 }
