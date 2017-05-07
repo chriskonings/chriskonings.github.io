@@ -24,12 +24,6 @@ date: 2012-04-06 21:35
     <p>
       I design using Sketch, Photoshop, Illustrator, and Design Thinking.
     </p>
-    <div class="hero-list">
-      <ul>
-        <li><a href="#work" title="Work">Work</a></li>
-        <li><a href="#explore" title="Explore">Explore</a></li>
-      </ul>
-    </div>
   </div>
 </div>
 
@@ -37,18 +31,26 @@ date: 2012-04-06 21:35
   <h3>Work</h3>
   <ul class="post-list">
     {% for post in site.categories.work %}
-      <li class="post-list__post">
-        <a title="{{ post.title | escape }}" class="post-list__link" href="{{ post.url | prepend: site.baseurl }}">
-          <div class="post-list__content" style="background-image:url('{{ post.thumbnail }}');"></div>
-          <div class="post-list__title"><h3>{{ post.title | escape }}</h3></div>
-        </a>
+      <li class="card">
+        <div class="card__content">
+          <a class="card__anchor" title="{{ post.title | escape }}" href="{{ post.url | prepend: site.baseurl }}">
+            <div class="card__image" style="background-image:url('{{ post.thumbnail }}');"></div>
+            <div class="card__name">
+              {{ post.title | escape }}
+            </div>
+            <p class="card__description">
+              {{ post.description | escape }}
+            </p>
+          </a>
+        </div>
       </li>
     {% endfor %}
   </ul>
 </div>
 <div class="block block--rise" id="explore">
   <h3>Explore</h3>
-  <ul class="no-list-style large-list">
+  <ul class="no-list-style">
+    <li><a href="http://chriskonings.com/third-wheel/build/" title="Long Distance Realtionship App" target="_blank">LDR React App</a> <span>- Activities for long distance couples.</span></li>
     <li><a href="/css-grid-cheat-sheet" title="CSS Grid Cheat Sheet" target="_blank">CSS Grid Cheat Sheet</a></li>
     <li><a href="https://blog.prototypr.io/how-to-move-beyond-design-tools-68fdf2a1a9bc" title="How To Move Beyond Design Tools" target="_blank">How To Move Beyond Design Tools</a></li>
     <li><a href="http://codepen.io/chriskonings/pen/oZXrZe" title="Open Letter Animation" target="_blank">Open Letter Animation</a></li>
