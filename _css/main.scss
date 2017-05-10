@@ -115,7 +115,7 @@ a {
 
 .post__details {
   padding: 20px 0;
-  border-bottom: 2px solid lighten($body-color, 80%);;
+  border-bottom: 8px solid $body-color;;
 }
 
 .post__nav {
@@ -175,16 +175,6 @@ a {
   }
 }
 
-.home-picture {
-  max-width: 250px;
-  display: block;
-  margin: 0 auto;
-  @media only screen and (min-width: 960px) {
-    max-width: none;
-    width: 100%;
-  }
-}
-
 .hero-list {
   display: none;
   width: 100%;
@@ -216,7 +206,13 @@ a {
 }
 .block__image {
   width: 100%;
-  height: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+  @media only screen and (min-width: 960px) {
+    max-width: none;
+    width: 100%;
+  }
 }
 
 .margin-xs { margin: 0.5em auto; }
@@ -360,7 +356,7 @@ a {
   flex-basis: 100%;
   &::before {
     content: '';
-    background: #dedede;
+    background: #eaeaea;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -371,7 +367,6 @@ a {
   &:hover {
     .card__content {
       transform: translate(-10px, 10px);
-
     }
   }
   @media only screen and (min-width: 640px) {

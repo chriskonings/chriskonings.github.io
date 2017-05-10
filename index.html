@@ -10,7 +10,7 @@ date: 2012-04-06 21:35
 
 <div class="block block--rise block--home-hero">
   <div class="block block--half">
-    <img class="home-picture" src="../assets/me.jpg">
+    <img class="block__image" src="../assets/me.jpg">
   </div>
 
 
@@ -47,11 +47,40 @@ date: 2012-04-06 21:35
     {% endfor %}
   </ul>
 </div>
+<div class="block block--rise" id="work">
+  <h3>Side-projects</h3>
+  <ul class="post-list">
+      <li class="card">
+        <div class="card__content">
+          <a class="card__anchor" title="third wheel" href="http://chriskonings.com/third-wheel/build/">
+            <div class="card__image" style="background-image:url('../assets/third-wheel-thumbnail.jpg');"></div>
+            <div class="card__name">
+              Third Wheel
+            </div>
+            <p class="card__description">
+              Activities for Long Distance Relationship couples with a focus on typography and simplicity, built in React.
+            </p>
+          </a>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card__content">
+          <a class="card__anchor" title="{{ post.title | escape }}" href="/css-grid-cheat-sheet/">
+            <div class="card__image" style="background-image:url('../assets/css-grid-thumbnail.jpg');"></div>
+            <div class="card__name">
+              CSS Grid Cheat Sheet
+            </div>
+            <p class="card__description">
+              A basic cheat sheet to get you started with CSS Grid, the two dimensional web grid system.
+            </p>
+          </a>
+        </div>
+      </li>
+  </ul>
+</div>
 <div class="block block--rise" id="explore">
   <h3>Explore</h3>
   <ul class="no-list-style">
-    <li><a href="http://chriskonings.com/third-wheel/build/" title="Long Distance Realtionship App" target="_blank">LDR React App</a> <span>- Activities for long distance couples.</span></li>
-    <li><a href="/css-grid-cheat-sheet" title="CSS Grid Cheat Sheet" target="_blank">CSS Grid Cheat Sheet</a></li>
     <li><a href="https://blog.prototypr.io/how-to-move-beyond-design-tools-68fdf2a1a9bc" title="How To Move Beyond Design Tools" target="_blank">How To Move Beyond Design Tools</a></li>
     <li><a href="http://codepen.io/chriskonings/pen/oZXrZe" title="Open Letter Animation" target="_blank">Open Letter Animation</a></li>
     <li><a href="http://codepen.io/chriskonings/pen/WpveaL" title="Send Button Animation" target="_blank">Send Button Interaction</a></li>
