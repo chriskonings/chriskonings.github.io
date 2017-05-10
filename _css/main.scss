@@ -169,7 +169,8 @@ a {
   position: relative;
   padding: 0;
   @media only screen and (min-width: 960px) {
-    min-height: calc(90vh - 5em);
+    height: calc(90vh - 5em);
+    max-height: 700px;
     padding: .5em;
   }
 }
@@ -354,6 +355,7 @@ a {
   max-width: 400px;
   position: relative;
   margin: 25px auto;
+  flex: 1;
   flex-grow: 0;
   flex-basis: 100%;
   &::before {
@@ -388,6 +390,11 @@ a {
   background: #fff;
   height: 100%;
   transition: all 0.3s ease;
+  &::after, &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .card__image {
