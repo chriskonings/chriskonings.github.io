@@ -8,7 +8,9 @@ const
   browserSync = require('browser-sync').create(),
   siteRoot = '_site',
   cssFiles = '_css/**/*.?(s)css',
-  cleanCSS = require('gulp-clean-css');
+  cleanCSS = require('gulp-clean-css'),
+  rename = require('gulp-rename'),
+  sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('serve', () => {
   browserSync.init({
@@ -40,10 +42,11 @@ gulp.task('jekyll', () => {
 
 gulp.task('css', () => {
   gulp.src(cssFiles)
-    .pipe(sass())
-    .pipe(concat('main.css'))
-    .pipe(autoprefixer())
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(sourcemaps.write())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('assets'));
 });
 

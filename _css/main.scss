@@ -379,6 +379,10 @@ a {
   }
 }
 
+.card--filler {
+  visibility: hidden;
+}
+
 .card__content {
   position: inherit;
   z-index: 3;
@@ -449,6 +453,24 @@ a {
   right: 0;
   padding: 20px;
   display: flex;
+}
+
+.footer__anchor {
+  @extend h3;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.v-align {
+  vertical-align: middle;
 }
 
 @keyframes wiggle {
