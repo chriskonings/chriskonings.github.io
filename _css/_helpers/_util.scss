@@ -1,0 +1,27 @@
+// BEGIN CLEARFIX
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+// END CLEARFIX
+
+.margin-xs { margin: 0.5em auto; }
+.margin-s { margin: 1em auto; }
+.margin-m { margin: 2em auto; }
+.margin-l { margin: 3em auto; }
+.margin-xl { margin: 4em auto; }
+.margin-no-top {margin-top: 0;}
+.margin-no-bottom {margin-bottom: 0;}
+.margin-no-left {margin-left: 0;}
+.margin-no-right {margin-right: 0;}
+
+.v-align {
+  vertical-align: middle;
+}

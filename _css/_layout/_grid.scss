@@ -1,0 +1,85 @@
+// --------------------------------------------------
+// Bootstrap Grid
+// --------------------------------------------------
+// TABLE OF CONTENTS
+// - Container
+// - Row
+// - Column
+
+// Fluid grid
+//
+// Utilizes the mixin meant for fixed width grid, but without any defined
+// width for fluid, full width layouts.
+.g--grid {
+  @include clearfix();
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Container widths
+//
+// Set the grid width, and override it for fixed navbars in media queries.
+.g--grid-fixed {
+  @extend .g--grid;
+
+  @media (min-width: map-get($g--grid-breakpoints, sm)) {
+    width: map-get($g--grid-max-widths, sm);
+  }
+
+  @media (min-width: map-get($g--grid-breakpoints, md)) {
+    width: map-get($g--grid-max-widths, md);
+  }
+
+  @media (min-width: map-get($g--grid-breakpoints, lg)) {
+    width: map-get($g--grid-max-widths, lg);
+  }
+}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+.g--row {
+  @include clearfix();
+  margin-left: ceil(($g--grid-gutter-width / -2));
+  margin-right: floor(($g--grid-gutter-width / -2));
+}
+
+// Column
+@for $i from 1 through $g--grid-columns {
+  .g--col-#{$i}, .g--col-xs-#{$i}, .g--col-sm-#{$i}, .g--col-md-#{$i}, .g--col-lg-#{$i} {
+    position: relative;
+    min-height: 1px; // prevent cols from collapsing when empty
+    padding-left:  ceil(($g--grid-gutter-width / 2)); // inner gutter via padding
+    padding-right: floor(($g--grid-gutter-width / 2)); // inner gutter via padding
+    width: 100%;
+    float: left;
+  }
+
+  .g--col-#{$i}, .g--col-xs-#{$i} {
+    max-width: percentage(($i / $g--grid-columns));
+  }
+}
+
+@media (min-width: map-get($g--grid-breakpoints, sm)) {
+  @for $i from 1 through $g--grid-columns {
+    .g--col-sm-#{$i} {
+        max-width: percentage(($i / $g--grid-columns));
+    }
+  }
+}
+
+@media (min-width: map-get($g--grid-breakpoints, md)) {
+  @for $i from 1 through $g--grid-columns {
+    .g--col-md-#{$i} {
+        max-width: percentage(($i / $g--grid-columns));
+    }
+  }
+}
+
+@media (min-width: map-get($g--grid-breakpoints, lg)) {
+  @for $i from 1 through $g--grid-columns {
+    .g--col-lg-#{$i} {
+        max-width: percentage(($i / $g--grid-columns));
+    }
+  }
+}

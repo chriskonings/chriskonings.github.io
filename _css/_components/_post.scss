@@ -1,0 +1,42 @@
+.post {
+  max-width: 960px;
+  position: relative;
+  padding: 0 20px 80px 20px;
+  &::after, &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @media only screen and (min-width: 960px) {
+    padding: 20px 80px 80px 80px;
+  }
+  @media only screen and (min-width: 750px) {
+    margin: 20px auto;
+  }
+}
+
+.post__details {
+  padding: 20px 0;
+  margin-bottom: 2em;
+  border-bottom: 8px solid $body-color;;
+}
+
+.post__nav {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 100px 0 50px 0;
+  display: flex;
+}
+
+.post__nav-prev {
+  flex: 1;
+  text-decoration: none;
+  text-align: left;
+}
+
+.post__nav-next {
+  flex: 1;
+  text-decoration: none;
+  text-align: right;
+}
