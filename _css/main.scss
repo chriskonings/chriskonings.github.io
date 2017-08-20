@@ -17,11 +17,10 @@
 html {
   min-height: 100vh;
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -35,8 +34,13 @@ body {
 }
 
 main {
-  margin: 0 auto;
+  margin: 25px auto;
   width: 100%;
+}
+
+.container {
+  overflow-x: hidden;
+  position: relative;
 }
 
 .button--margin {

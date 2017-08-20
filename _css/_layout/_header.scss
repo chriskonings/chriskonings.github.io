@@ -2,17 +2,20 @@
   font-size: $heading-font-size-px;
   font-size: $heading-font-size-rem;
   font-weight: $heading-font-weight;
-  // padding: 20px;
+  padding: 25px;
   text-align: center;
   @media only screen and (min-width: 768px) {
+    padding: 25px 0;
     text-align: left;
   }
 }
 
 .header__name {
-  width: 100%;
-  margin-bottom: 20px;
   z-index: 2;
+  margin-bottom: 25px;
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+  }
 }
 
 .header__emoji {

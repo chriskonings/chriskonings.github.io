@@ -32,7 +32,7 @@
 .hero {
   position: relative;
   padding: 0;
-  @media only screen and (min-width: 960px) {
+  @media only screen and (min-width: 992px) {
     height: calc(90vh - 5em);
     max-height: 700px;
     padding: .5em;

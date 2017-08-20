@@ -33,6 +33,10 @@
   @media (min-width: map-get($grid-breakpoints, lg)) {
     width: map-get($grid-max-widths, lg);
   }
+
+  @media (min-width: map-get($grid-breakpoints, xl)) {
+    width: map-get($grid-max-widths, xl);
+  }
 }
 
 // Row
