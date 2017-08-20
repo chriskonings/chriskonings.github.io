@@ -40,3 +40,23 @@
   text-decoration: none;
   text-align: right;
 }
+
+.post--shadow {
+  box-shadow: none;
+  @media only screen and (min-width: 1000px) {
+    box-shadow: 0 0 30px -5px rgba(185, 185, 185, 0.75);
+  }
+}
+
+.post--rise {
+  animation: riseup 1s ease;
+}
+
+@keyframes riseup {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

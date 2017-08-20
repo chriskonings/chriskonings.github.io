@@ -25,9 +25,6 @@ html {
 }
 
 body {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   font-family: $primary-font-family;
   background-color: $white-color;
   min-height: 100vh;
@@ -35,14 +32,6 @@ body {
   font-size: $body-font-size-px;
   font-size: $body-font-size-rem;
   -webkit-overflow-scrolling: touch;
-  &::before {
-    //content: '';
-    width: 5px;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    border: 10px solid $body-color;
-  }
 }
 
 main {
@@ -52,11 +41,6 @@ main {
 
 .button--margin {
   margin: .3em 0;
-}
-
-.page {
-  @extend .post;
-  box-shadow: 0 0 30px -5px rgba(185, 185, 185, 0.75);
 }
 
 .hero-list {
@@ -76,10 +60,6 @@ main {
   @media only screen and (min-width: 960px) {
     display: block;
   }
-}
-
-.anim-rise {
-  animation: riseup 1s ease;
 }
 
 .content__post-half--margin-left {
@@ -131,13 +111,4 @@ main {
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
-}
-
-@keyframes riseup {
-  from {
-    transform: translateY(50px);
-  }
-  to {
-    transform: translateY(0);
-  }
 }

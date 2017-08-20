@@ -1,6 +1,6 @@
 {% include header.html %}
   <main>
-    <div class="post">
+    <div class="post {% if page.shadow %}post--shadow{% endif %} {% if page.riseanimation %}post--rise{% endif %}">
       {{ content }}
     </div>
   </main>

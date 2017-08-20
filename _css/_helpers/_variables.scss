@@ -37,8 +37,8 @@ $body-color: #000;
 
 
 // GRID
-$g--grid-columns:               12;
-$g--grid-breakpoints: (
+$grid-columns:               12;
+$grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
@@ -46,18 +46,18 @@ $g--grid-breakpoints: (
   xl: 1200px
 );
 
-$g--grid-max-widths: (
+$grid-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px
 );
 
-$g--grid-gutter-width:          30px;
-$g--grid-gutter-widths: (
-  xs: $g--grid-gutter-width,
-  sm: $g--grid-gutter-width,
-  md: $g--grid-gutter-width,
-  lg: $g--grid-gutter-width,
-  xl: $g--grid-gutter-width
+$grid-gutter-width:          30px;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width,
+  sm: $grid-gutter-width,
+  md: $grid-gutter-width,
+  lg: $grid-gutter-width,
+  xl: $grid-gutter-width
 );

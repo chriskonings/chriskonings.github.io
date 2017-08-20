@@ -1,20 +1,20 @@
 ---
-layout: home
+layout: base
 title: home
 category: none
+shadow: true
+riseanimation: true
 date: 2012-04-06 21:35
 ---
 
 
+<div class="row hero">
 
-
-<div class="block block--rise block--home-hero">
-  <div class="block block--half">
+  <div class="col-md-6">
     <img class="block__image" src="../assets/me.jpg">
   </div>
 
-
-  <div class="block block--half">
+  <div class="col-md-6">
     <h1>
       Designer and Front-End Developer with a background in web agency, freelance and lecturing.
     </h1>
@@ -26,69 +26,74 @@ date: 2012-04-06 21:35
       I design using Sketch, Photoshop, Illustrator, and Design Thinking.
     </p>
   </div>
+
 </div>
 
-<div class="block block--rise" id="work">
-  <h3>Work</h3>
-  <ul class="post-list">
-    {% for post in site.categories.work %}
-      <li class="card">
-        <div class="card__content">
-          <a class="card__anchor" title="{{ post.title | escape }}" href="{{ post.url | prepend: site.baseurl }}">
-            <div class="card__image" style="background-image:url('{{ post.thumbnail }}');"></div>
-            <div class="card__name">
-              {{ post.title | escape }}
-            </div>
-            <p class="card__description">
-              {{ post.description | escape }}
-            </p>
-          </a>
-        </div>
-      </li>
-    {% endfor %}
-    <li class="card card--filler"></li>
-    <li class="card card--filler"></li>
-  </ul>
-</div>
-<div class="block block--rise" id="work">
-  <h3>Side-projects</h3>
-  <ul class="post-list">
-      <li class="card">
-        <div class="card__content">
-          <a class="card__anchor" title="third wheel" href="http://chriskonings.com/third-wheel/build/">
-            <div class="card__image" style="background-image:url('../assets/third-wheel-thumbnail.jpg');"></div>
-            <div class="card__name">
-              Third Wheel
-            </div>
-            <p class="card__description">
-              Activities for Long Distance Relationship couples with a focus on typography and simplicity, built in React.
-            </p>
-          </a>
-        </div>
-      </li>
-      <li class="card">
-        <div class="card__content">
-          <a class="card__anchor" title="{{ post.title | escape }}" href="/css-grid-cheat-sheet/">
-            <div class="card__image" style="background-image:url('../assets/css-grid-thumbnail.jpg');"></div>
-            <div class="card__name">
-              CSS Grid Cheat Sheet
-            </div>
-            <p class="card__description">
-              A basic cheat sheet to get you started with CSS Grid, the two dimensional web grid system.
-            </p>
-          </a>
-        </div>
-      </li>
+<div class="row">
+
+  <div class="block block--rise" id="work">
+    <h3>Work</h3>
+    <ul class="post-list">
+      {% for post in site.categories.work %}
+        <li class="card">
+          <div class="card__content">
+            <a class="card__anchor" title="{{ post.title | escape }}" href="{{ post.url | prepend: site.baseurl }}">
+              <div class="card__image" style="background-image:url('{{ post.thumbnail }}');"></div>
+              <div class="card__name">
+                {{ post.title | escape }}
+              </div>
+              <p class="card__description">
+                {{ post.description | escape }}
+              </p>
+            </a>
+          </div>
+        </li>
+      {% endfor %}
       <li class="card card--filler"></li>
-  </ul>
-</div>
-<div class="block block--rise" id="explore">
-  <h3>More by me</h3>
-  <ul class="no-list-style">
-    <li><a href="https://blog.prototypr.io/how-to-move-beyond-design-tools-68fdf2a1a9bc" title="How To Move Beyond Design Tools" target="_blank">How To Move Beyond Design Tools</a></li>
-    <li><a href="http://codepen.io/chriskonings/pen/oZXrZe" title="Open Letter Animation" target="_blank">Open Letter Animation</a></li>
-    <li><a href="http://codepen.io/chriskonings/pen/WpveaL" title="Send Button Animation" target="_blank">Send Button Interaction</a></li>
-    <li><a href="http://chriskonings.com/html" title="HTML and related conventions" target="_blank">The Importance Of Semantic HTML</a></li>
-    <li><a href="http://chriskonings.com/bem" title="BEM" target="_blank">Writing Maintainable Code Using BEM</a></li>
-  </ul>
+      <li class="card card--filler"></li>
+    </ul>
+  </div>
+  <div class="block block--rise" id="work">
+    <h3>Side-projects</h3>
+    <ul class="post-list">
+        <li class="card">
+          <div class="card__content">
+            <a class="card__anchor" title="third wheel" href="http://chriskonings.com/third-wheel/build/">
+              <div class="card__image" style="background-image:url('../assets/third-wheel-thumbnail.jpg');"></div>
+              <div class="card__name">
+                Third Wheel
+              </div>
+              <p class="card__description">
+                Activities for Long Distance Relationship couples with a focus on typography and simplicity, built in React.
+              </p>
+            </a>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card__content">
+            <a class="card__anchor" title="{{ post.title | escape }}" href="/css-grid-cheat-sheet/">
+              <div class="card__image" style="background-image:url('../assets/css-grid-thumbnail.jpg');"></div>
+              <div class="card__name">
+                CSS Grid Cheat Sheet
+              </div>
+              <p class="card__description">
+                A basic cheat sheet to get you started with CSS Grid, the two dimensional web grid system.
+              </p>
+            </a>
+          </div>
+        </li>
+        <li class="card card--filler"></li>
+    </ul>
+  </div>
+  <div class="block block--rise" id="explore">
+    <h3>More by me</h3>
+    <ul class="no-list-style">
+      <li><a href="https://blog.prototypr.io/how-to-move-beyond-design-tools-68fdf2a1a9bc" title="How To Move Beyond Design Tools" target="_blank">How To Move Beyond Design Tools</a></li>
+      <li><a href="http://codepen.io/chriskonings/pen/oZXrZe" title="Open Letter Animation" target="_blank">Open Letter Animation</a></li>
+      <li><a href="http://codepen.io/chriskonings/pen/WpveaL" title="Send Button Animation" target="_blank">Send Button Interaction</a></li>
+      <li><a href="http://chriskonings.com/html" title="HTML and related conventions" target="_blank">The Importance Of Semantic HTML</a></li>
+      <li><a href="http://chriskonings.com/bem" title="BEM" target="_blank">Writing Maintainable Code Using BEM</a></li>
+    </ul>
+  </div>
+
 </div>

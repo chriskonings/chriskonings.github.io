@@ -11,14 +11,14 @@
     <script {% if current.length > 0 %}src="../assets/prism.js?v=1"{% else %}src="../../assets/prism.js?v=1"{% endif %}></script>
     <script {% if current.length > 0 %}src="../assets/scripts.js?v=1"{% else %}src="../../assets/scripts.js?v=1"{% endif %}></script>
   </head>
-  <body>
-      <header class="header">
-        <div class="header__name">
+  <body class="grid">
+      <header class="row header">
+        <div class="col-md-6 header__name">
           <a class="header__link" href="/">Chris Konings</a>
           <span class="header__role">Design / Front-End</span>
           <img class="header__emoji" src="../../assets/emoji.png" alt="emoji">
         </div>
-        <nav class="nav-wrapper">
+        <nav class="col-md-6 nav-wrapper">
           <ul class="nav">
             <li class="nav__item">
               <a class="nav__item-link" href="https://medium.com/@chriskonings" target="_blank">blog</a>
