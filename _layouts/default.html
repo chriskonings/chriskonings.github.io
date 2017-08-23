@@ -1,19 +1,14 @@
 {% include header.html %}
-  <main>
-    <div class="post">
-      <div class="post__details">
-        <h1>{{page.title}}</h1>
-        <h2>{{page.customdate}}</h2>
-      </div>
-      {{ content }}
-      <div class="post__nav">
-        {% if page.previous %}
-          <a class="post__nav-prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-        {% endif %}
-        {% if page.next %}
-          <a class="post__nav-next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-        {% endif %}
-      </div>
+  <main class="post">
+
+    {{ content }}
+    <div class="post__nav">
+      {% if page.previous %}
+        <a class="post__nav-prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+      {% if page.next %}
+        <a class="post__nav-next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+      {% endif %}
     </div>
   </main>
 {% include footer.html %}

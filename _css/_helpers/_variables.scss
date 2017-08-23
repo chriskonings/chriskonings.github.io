@@ -3,38 +3,26 @@
 $primary-font-family: 'Open Sans', sans-serif;
 $secondary-font-family: 'Abril Fatface', cursive;
 
+$base-font-size: 1em;
+$base-font-weight: 400;
+$base-line-height: 1.75;
+
+$h1-font-size: 2.441em;
+$h2-font-size: 1.953em;
+$h3-font-size: 1.563em;
+$h4-font-size: 1.25em;
+$small-font-size: 0.8em;
+
+$heading-line-height: 1.2;
+$heading-font-weight: $base-font-weight;
 $heading-font-family: $primary-font-family;
 
-$body-font-size-px: 16px;
-$body-font-size-rem: 1.6rem;
-
-$h1-font-size-px: 32px;
-$h1-font-size-rem: 3.2rem;
-
-$h2-font-size-px: 24px;
-$h2-font-size-rem: 2.4rem;
-
-$h3-font-size-px: 20px;
-$h3-font-size-rem: 2.0rem;
-
-$h4-font-size-px: 18px;
-$h4-font-size-rem: 18px;
-
-$h5-font-size-px: 16px;
-$h5-font-size-rem: 18px;
-
-$heading-font-weight: normal;
-$heading-font-size-px: $h2-font-size-px;
-$heading-font-size-rem: $h2-font-size-rem;
-
-$font-weight-bold: bold;
-
+$font-weight-bold: 700;
 
 // COLORS
 $white-color: #f9f9f9;
 $alt-white-color: #696969;
 $body-color: #000;
-
 
 // GRID
 $grid-columns:               12;

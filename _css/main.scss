@@ -6,113 +6,43 @@
 @import '_vendor/syntax';
 @import '_vendor/prism';
 @import '_components/block';
+@import '_components/hero';
 @import '_components/button';
 @import '_components/card';
 @import '_components/post';
 @import '_layout/header';
 @import '_layout/nav';
 @import '_layout/footer';
+@import '_pages/home';
 @import '_pages/grid-cheat-sheet';
 
 html {
   min-height: 100vh;
-  font-size: 62.5%;
+  font-size: $base-font-size;
 }
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
-body {
+.container {
+  font-weight: $base-font-weight;
+  position: relative;
   font-family: $primary-font-family;
   background-color: $white-color;
+  line-height: $base-line-height;
   min-height: 100vh;
   height: auto;
-  font-size: $body-font-size-px;
-  font-size: $body-font-size-rem;
   -webkit-overflow-scrolling: touch;
-}
-
-main {
-  margin: 25px auto;
-  width: 100%;
-}
-
-.container {
   overflow-x: hidden;
-  position: relative;
 }
 
-.button--margin {
-  margin: .3em 0;
-}
-
-.hero-list {
-  display: none;
+.black-bar {
   width: 100%;
-  text-align: center;
-  content: 'down';
+  height: 350px;
+  background: black;
+  display: block;
   position: absolute;
-  margin: auto;
-  bottom: 0;
   left: 0;
-  right: 0;
-  li {
-    margin: 0 5px;
-    display: inline-block;
-  }
-  @media only screen and (min-width: 960px) {
-    display: block;
-  }
-}
-
-.content__post-half--margin-left {
-  @media only screen and (min-width: 960px) {
-    margin-left: 5%;
-    width: 54%
-  }
-}
-
-.post-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  align-content: space-between;
-  justify-content: space-between;
-  flex-flow: column wrap;
-
-  @media only screen and (min-width: 640px) {
-    flex-flow: row wrap;
-  }
-
-  @media only screen and (min-width: 850px) {
-    flex-flow: row wrap;
-  }
-}
-
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-  & iframe {
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-  	width: 100%;
-  	height: 100%;
-  }
-}
-
-@keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-0.5deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(0.5deg); }
-  100% { transform: rotate(0deg); }
-}
-
-@keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  margin-top: 80px;
 }

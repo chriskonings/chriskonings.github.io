@@ -28,24 +28,3 @@
     width: 59%;
   }
 }
-
-.hero {
-  position: relative;
-  padding: 0;
-  @media only screen and (min-width: 992px) {
-    height: calc(90vh - 5em);
-    max-height: 700px;
-    padding: .5em;
-  }
-}
-
-.block__image {
-  width: 100%;
-  max-width: 500px;
-  display: block;
-  margin: 0 auto;
-  @media only screen and (min-width: 960px) {
-    max-width: none;
-    width: 100%;
-  }
-}

@@ -87,3 +87,9 @@
     }
   }
 }
+
+.row-black {
+  &::after {
+    content: '';
+  }
+}

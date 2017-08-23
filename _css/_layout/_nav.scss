@@ -21,7 +21,6 @@
 }
 
 .nav__item-link {
-  @extend h3;
   text-decoration: none;
   &:hover {
     color: #fff;

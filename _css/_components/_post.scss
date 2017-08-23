@@ -1,8 +1,7 @@
 .post {
-  max-width: 960px;
-  position: relative;
-  margin: 0 auto;
+  margin: 15px auto 60px auto;
   padding: 0 20px;
+  max-width: 960px;
   &::after, &::before {
     content: "";
     display: table;
@@ -12,14 +11,34 @@
     padding: 0 5px;
   }
   @media only screen and (min-width: 992px) {
-    padding: 20px 80px 80px 80px;
+    padding: 40px 80px 80px 80px;
   }
 }
 
 .post__details {
   padding: 20px 0;
   margin-bottom: 2em;
-  border-bottom: 8px solid $body-color;;
+}
+
+.post__product-name {
+  @extend h4;
+  color: #7c7c7c;
+  display: block;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.post__tagline {
+  font-weight: 700;
+  margin: 0 auto;
+  font-size: 2.441em;
+  line-height: $heading-line-height;
+  @media only screen and (min-width: 768px) {
+    font-size: 3.157em;
+  }
+  @media only screen and (min-width: 960px) {
+    font-size: 3.998em;
+  }
 }
 
 .post__nav {
@@ -60,4 +79,31 @@
   to {
     transform: translateY(0);
   }
+}
+
+.offset-left {
+  display: block;
+  height: 400px;
+  z-index: 4;
+}
+
+.offset-left__container {
+  position: absolute;
+  left: 0;
+  @media only screen and (min-width: 756px) {
+    left: -15px;
+  }
+}
+
+.offset-left__image {
+  width: 100%;
+}
+
+.offset-overlay {
+  background: #000;
+  color: #fff;
+  z-index: 5;
+  margin: 50px auto;
+  position: relative;
+  padding: 20px;
 }

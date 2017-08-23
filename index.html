@@ -10,13 +10,13 @@ date: 2012-04-06 21:35
 
 <div class="row hero">
   <div class="col-md-6">
-    <img class="block__image" src="../assets/me.jpg">
+    <img class="full-image" src="../assets/me.jpg">
   </div>
   <div class="col-md-6">
-    <h1>
-      Designer and Front-End Developer with a background in web agency, freelance and lecturing.
+    <h1 class="bold">
+      Designer and Front End Developer with a background in web agency, freelance and lecturing.
     </h1>
-    <h2>Currently <a href="http://www.justeat.com/" title="Just Eat" target="_blank"><mark>Just Eat</mark></a>, previously <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank">IBM</a></h2>
+    <h4>Currently <a href="http://www.justeat.com/" title="Just Eat" target="_blank"><mark>Just Eat</mark></a>, previously <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank">IBM</a></h4>
     <p>
       I write scalable and maintainable front-end code using HTML, CSS/SCSS, BEM, Javascript/jQuery, Wordpress, Angular, Unity3D and Git.
     </p>
@@ -27,18 +27,17 @@ date: 2012-04-06 21:35
 </div>
 
 <div class="row">
-
-  <div class="block block--rise" id="work">
-    <h3>Work</h3>
+  <div class="col-md-12" id="work">
+    <h4>Work</h4>
     <ul class="post-list">
       {% for post in site.categories.work %}
         <li class="card">
           <div class="card__content">
             <a class="card__anchor" title="{{ post.title | escape }}" href="{{ post.url | prepend: site.baseurl }}">
               <div class="card__image" style="background-image:url('{{ post.thumbnail }}');"></div>
-              <div class="card__name">
+              <h4 class="card__name">
                 {{ post.title | escape }}
-              </div>
+              </h4>
               <p class="card__description">
                 {{ post.description | escape }}
               </p>
@@ -50,9 +49,11 @@ date: 2012-04-06 21:35
       <li class="card card--filler"></li>
     </ul>
   </div>
+</div>
 
-  <div class="block block--rise" id="work">
-    <h3>Side-projects</h3>
+<div class="row">
+  <div class="col-md-12" id="work">
+    <h4>Side projects</h4>
     <ul class="post-list">
         <li class="card">
           <div class="card__content">
@@ -83,8 +84,11 @@ date: 2012-04-06 21:35
         <li class="card card--filler"></li>
     </ul>
   </div>
-  <div class="block block--rise" id="explore">
-    <h3>More by me</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12" id="explore">
+    <h4>More</h4>
     <ul class="no-list-style">
       <li><a href="https://blog.prototypr.io/how-to-move-beyond-design-tools-68fdf2a1a9bc" title="How To Move Beyond Design Tools" target="_blank">How To Move Beyond Design Tools</a></li>
       <li><a href="http://codepen.io/chriskonings/pen/oZXrZe" title="Open Letter Animation" target="_blank">Open Letter Animation</a></li>
@@ -93,5 +97,4 @@ date: 2012-04-06 21:35
       <li><a href="http://chriskonings.com/bem" title="BEM" target="_blank">Writing Maintainable Code Using BEM</a></li>
     </ul>
   </div>
-
 </div>

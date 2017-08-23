@@ -1,0 +1,16 @@
+.post-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  flex-flow: column wrap;
+
+  @media only screen and (min-width: 640px) {
+    flex-flow: row wrap;
+  }
+
+  @media only screen and (min-width: 850px) {
+    flex-flow: row wrap;
+  }
+}

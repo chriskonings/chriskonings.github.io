@@ -5,18 +5,13 @@
   right: 0;
   padding: 20px;
   display: flex;
+  max-width: 1140px;
+  margin: auto;
+  text-align: center;
 }
 
 .footer__anchor {
-  @extend h3;
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-}
-
-.footer__icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
 }
