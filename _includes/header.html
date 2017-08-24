@@ -12,21 +12,22 @@
     <script {% if current.length > 0 %}src="../assets/scripts.js?v=1"{% else %}src="../../assets/scripts.js?v=1"{% endif %}></script>
   </head>
   <body class="container">
-    <div class="grid-fixed">
-      <header class="row header">
-        <div class="col-md-7 header__name">
-          <a class="header__link" href="/">Chris Konings</a>
-          <span class="header__role">Design / Front-End</span>
-          <img class="header__emoji" src="../../assets/emoji.png" alt="emoji">
+      <header class="grid-fixed header">
+        <div class="row">
+          <div class="col-md-7 header__name">
+            <a class="header__link" href="/">Chris Konings</a>
+            <span class="header__role">Design / Front-End</span>
+            <img class="header__emoji" src="../../assets/emoji.png" alt="emoji">
+          </div>
+          <nav class="col-md-5">
+            <ul class="nav">
+              <li class="nav__item">
+                <a class="nav__item-link" href="https://medium.com/@chriskonings" target="_blank">BLOG</a>
+              </li>
+              <li {% if current[1] == "about" %}class="nav__item nav__item--active"{% else %}class="nav__item"{% endif %}>
+                <a class="nav__item-link" href="/about/">ME</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="col-md-5">
-          <ul class="nav">
-            <li class="nav__item">
-              <a class="nav__item-link" href="https://medium.com/@chriskonings" target="_blank">BLOG</a>
-            </li>
-            <li {% if current[1] == "about" %}class="nav__item nav__item--active"{% else %}class="nav__item"{% endif %}>
-              <a class="nav__item-link" href="/about/">ME</a>
-            </li>
-          </ul>
-        </nav>
       </header>

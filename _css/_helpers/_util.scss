@@ -28,7 +28,6 @@
 
 .full-image {
   width: 100%;
-  max-width: 300px;
   display: block;
   margin: 1.5rem auto;
   @media only screen and (min-width: 960px) {
@@ -40,6 +39,19 @@
     margin-top: 0;
     margin-bottom: 1.5rem;
   }
+}
+
+.full-image--height {
+  width: auto;
+  height: 100%;
+}
+
+.full-image--max-500 {
+  max-width: 500px;
+}
+
+.full-image--max-300 {
+  max-width: 300px;
 }
 
 .videoWrapper {
