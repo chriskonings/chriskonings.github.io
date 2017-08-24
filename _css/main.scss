@@ -48,9 +48,10 @@ html {
 
 
 .gridless {
-  width: 100%; display: block; max-width: 1500px; margin: 0 auto;
-  @media screen and (min-width: 960px) {
-  }
+  width: 100%;
+  display: block;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .gridless--black {
@@ -60,16 +61,16 @@ html {
     content: '';
     background: black;
     color: white;
-    height: 100%;
+    height: 70%;
     width: 100%;
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: auto;
     left: 0;
     right: 0;
     margin: auto;
     @media screen and (min-width: 991px) {
-      height: 70%;
+      bottom: 0;
     }
   }
   .gridless__left, .gridless__right {
@@ -80,24 +81,26 @@ html {
 .gridless__left {
   vertical-align: top;
   width: 100%;
-  display: inline-block;
+  display: block;
   position: relative;
+  max-width: 700px;
+  margin: 0 auto;
   @media screen and (min-width: 991px) {
+    display: inline-block;
+    max-width: none;
     width: 50%;
   }
 }
 
 .gridless__left-image {
   position: initial;
-  max-width: 500px;
   @media screen and (min-width: 991px) {
-    max-width: none;
     position: absolute;
   }
 }
 
 .gridless__right-image {
-  max-width: 500px;
+  max-width: 700px;
   @media screen and (min-width: 991px) {
     max-width: none;
   }
@@ -106,10 +109,13 @@ html {
 .gridless__right {
   vertical-align: top;
   width: 100%;
-  display: inline-block;
-  padding: 0 20px;
+  display: block;
   position: relative;
+  max-width: 700px;
+  margin: 0 auto;
   @media screen and (min-width: 991px) {
+    display: inline-block;
+    max-width: none;
     width: 49.5%;
   }
 }

@@ -6,95 +6,97 @@ shadow: true
 riseanimation: true
 date: 2012-04-06 21:35
 ---
-
-
-<div class="row hero">
-  <div class="col-md-6">
-    <img class="full-image" src="../assets/me.jpg">
+<main class="grid-fixed" style="background: #f9f9f9;">
+  <div class="post-wrapper {% if page.shadow %}post--shadow{% endif %} {% if page.riseanimation %}post--rise{% endif %}">
+  <div class="row hero">
+    <div class="col-md-6">
+      <img class="full-image" src="../assets/me.jpg">
+    </div>
+    <div class="col-md-6">
+      <h1 class="bold">
+        Designer and Front End Developer with a background in web agency, freelance and lecturing.
+      </h1>
+      <h4>Currently <a href="http://www.justeat.com/" title="Just Eat" target="_blank"><mark>Just Eat</mark></a>, previously <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank">IBM</a></h4>
+      <p>
+        I write scalable and maintainable front-end code using HTML, CSS/SCSS, BEM, Javascript/jQuery, Wordpress, Angular, Unity3D and Git.
+      </p>
+      <p>
+        I design using Sketch, Photoshop, Illustrator, and Design Thinking.
+      </p>
+    </div>
   </div>
-  <div class="col-md-6">
-    <h1 class="bold">
-      Designer and Front End Developer with a background in web agency, freelance and lecturing.
-    </h1>
-    <h4>Currently <a href="http://www.justeat.com/" title="Just Eat" target="_blank"><mark>Just Eat</mark></a>, previously <a href="http://www.ibm.com/design/" title="IBM Design" target="_blank">IBM</a></h4>
-    <p>
-      I write scalable and maintainable front-end code using HTML, CSS/SCSS, BEM, Javascript/jQuery, Wordpress, Angular, Unity3D and Git.
-    </p>
-    <p>
-      I design using Sketch, Photoshop, Illustrator, and Design Thinking.
-    </p>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-md-12" id="work">
-    <h4>Work</h4>
-    <ul class="post-list">
-      {% for post in site.categories.work %}
-        <li class="card">
-          <div class="card__content">
-            <a class="card__anchor" title="{{ post.title | escape }}" href="{{ post.url | prepend: site.baseurl }}">
-              <div class="card__image" style="background-image:url('{{ post.thumbnail }}');"></div>
-              <h4 class="card__name">
-                {{ post.title | escape }}
-              </h4>
-              <p class="card__description">
-                {{ post.description | escape }}
-              </p>
-            </a>
-          </div>
-        </li>
-      {% endfor %}
-      <li class="card card--filler"></li>
-      <li class="card card--filler"></li>
-    </ul>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12" id="work">
-    <h4>Side projects</h4>
-    <ul class="post-list">
-        <li class="card">
-          <div class="card__content">
-            <a class="card__anchor" title="third wheel" href="http://chriskonings.com/third-wheel/build/">
-              <div class="card__image" style="background-image:url('../assets/third-wheel-thumbnail.jpg');"></div>
-              <div class="card__name">
-                Third Wheel
-              </div>
-              <p class="card__description">
-                Activities for Long Distance Relationship couples with a focus on typography and simplicity, built in React.
-              </p>
-            </a>
-          </div>
-        </li>
-        <li class="card">
-          <div class="card__content">
-            <a class="card__anchor" title="{{ post.title | escape }}" href="/css-grid-cheat-sheet/">
-              <div class="card__image" style="background-image:url('../assets/css-grid-thumbnail.jpg');"></div>
-              <div class="card__name">
-                CSS Grid Cheat Sheet
-              </div>
-              <p class="card__description">
-                A basic cheat sheet to get you started with CSS Grid, the two dimensional web grid system.
-              </p>
-            </a>
-          </div>
-        </li>
+  <div class="row">
+    <div class="col-md-12" id="work">
+      <h4>Work</h4>
+      <ul class="post-list">
+        {% for post in site.categories.work %}
+          <li class="card">
+            <div class="card__content">
+              <a class="card__anchor" title="{{ post.title | escape }}" href="{{ post.url | prepend: site.baseurl }}">
+                <div class="card__image" style="background-image:url('{{ post.thumbnail }}');"></div>
+                <h4 class="card__name">
+                  {{ post.title | escape }}
+                </h4>
+                <p class="card__description">
+                  {{ post.description | escape }}
+                </p>
+              </a>
+            </div>
+          </li>
+        {% endfor %}
         <li class="card card--filler"></li>
-    </ul>
+        <li class="card card--filler"></li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-md-12" id="explore">
-    <h4>More</h4>
-    <ul class="no-list-style">
-      <li><a href="https://blog.prototypr.io/how-to-move-beyond-design-tools-68fdf2a1a9bc" title="How To Move Beyond Design Tools" target="_blank">How To Move Beyond Design Tools</a></li>
-      <li><a href="http://codepen.io/chriskonings/pen/oZXrZe" title="Open Letter Animation" target="_blank">Open Letter Animation</a></li>
-      <li><a href="http://codepen.io/chriskonings/pen/WpveaL" title="Send Button Animation" target="_blank">Send Button Interaction</a></li>
-      <li><a href="http://chriskonings.com/html" title="HTML and related conventions" target="_blank">The Importance Of Semantic HTML</a></li>
-      <li><a href="http://chriskonings.com/bem" title="BEM" target="_blank">Writing Maintainable Code Using BEM</a></li>
-    </ul>
+  <div class="row">
+    <div class="col-md-12" id="work">
+      <h4>Side projects</h4>
+      <ul class="post-list">
+          <li class="card">
+            <div class="card__content">
+              <a class="card__anchor" title="third wheel" href="http://chriskonings.com/third-wheel/build/">
+                <div class="card__image" style="background-image:url('../assets/third-wheel-thumbnail.jpg');"></div>
+                <div class="card__name">
+                  Third Wheel
+                </div>
+                <p class="card__description">
+                  Activities for Long Distance Relationship couples with a focus on typography and simplicity, built in React.
+                </p>
+              </a>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__content">
+              <a class="card__anchor" title="{{ post.title | escape }}" href="/css-grid-cheat-sheet/">
+                <div class="card__image" style="background-image:url('../assets/css-grid-thumbnail.jpg');"></div>
+                <div class="card__name">
+                  CSS Grid Cheat Sheet
+                </div>
+                <p class="card__description">
+                  A basic cheat sheet to get you started with CSS Grid, the two dimensional web grid system.
+                </p>
+              </a>
+            </div>
+          </li>
+          <li class="card card--filler"></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12" id="explore">
+      <h4>More</h4>
+      <ul class="no-list-style">
+        <li><a href="https://blog.prototypr.io/how-to-move-beyond-design-tools-68fdf2a1a9bc" title="How To Move Beyond Design Tools" target="_blank">How To Move Beyond Design Tools</a></li>
+        <li><a href="http://codepen.io/chriskonings/pen/oZXrZe" title="Open Letter Animation" target="_blank">Open Letter Animation</a></li>
+        <li><a href="http://codepen.io/chriskonings/pen/WpveaL" title="Send Button Animation" target="_blank">Send Button Interaction</a></li>
+        <li><a href="http://chriskonings.com/html" title="HTML and related conventions" target="_blank">The Importance Of Semantic HTML</a></li>
+        <li><a href="http://chriskonings.com/bem" title="BEM" target="_blank">Writing Maintainable Code Using BEM</a></li>
+      </ul>
+    </div>
   </div>
 </div>
+</main>
