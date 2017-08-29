@@ -113,6 +113,7 @@ html {
   position: relative;
   max-width: 700px;
   margin: 0 auto;
+  padding: 10px;
   @media screen and (min-width: 991px) {
     display: inline-block;
     max-width: none;
@@ -122,4 +123,42 @@ html {
 
 .gridless__text {
   padding: 50px;
+}
+
+#main-group #book-group{
+  animation-name: hover;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#main-group #shadow {
+  animation-name: shadowhover;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes shadowhover {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes hover {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
