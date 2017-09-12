@@ -125,11 +125,11 @@ html {
   padding: 50px;
 }
 
-#main-group #book-group{
-  animation-name: hover;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+.svg-illustration:hover {
+  #book-group {
+    transition: 1s ease;
+    transform: translate(0, -20px);  
+  }
 }
 
 #main-group #shadow {
