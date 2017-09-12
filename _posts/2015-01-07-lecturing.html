@@ -9,36 +9,58 @@ thumbnail: /assets/lecturing-01.jpg
 permalink: /work/:title/
 ---
 
-<div class="block block--half">
-  <p>
-    After graduating with a first-class honours in Digital Media Development, I was invited to lecture
-    <a href="http://www.dmd-winchester.org.uk/" target="_blank" title="Digital Media">Digital Media</a> students at
-    <a href="http://www.winchester.ac.uk/" target="_blank" title="University Of Winchester">The University of Winchester</a>.
-  </p>
 
-  <h3>Role</h3>
-  <p>
-    As a technical lecturer, I taught students the required technical understanding for each project involving basic Javascript, semantic HTML, CSS animation, and Unity3D game development. I supported students throughout the semester by building template projects, troubleshooting, and giving advice on UX design.
-  </p>
+<div class="grid-fixed">
+  <div class="post-wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="main-tagline bold">Lecturing</h1>
+        <h2>
+          Teaching code and knowledge sharing.
+        </h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <p>
+          After graduating with a first-class honours in Digital Media Development, I was invited to lecture
+          <a href="http://www.dmd-winchester.org.uk/" target="_blank" title="Digital Media">Digital Media</a> students at
+          <a href="http://www.winchester.ac.uk/" target="_blank" title="University Of Winchester">The University of Winchester</a>.
+        </p>
 
-  <h3>Talk Topics</h3>
-  <p>
-    I taught classes twice a week on the following subjects:
-  </p>
-  <ul>
-    <li>UX and Interface Design</li>
-    <li>Responsive Design</li>
-    <li>Accessibility</li>
-    <li>Knowing Your User</li>
-    <li>Design Thinking</li>
-    <li>The Importance Of Semantics</li>
-  </ul>
-  <p>
-    I also taught students the tools they needed to build each project: HTML, CSS, jQuery, vanilla Javascript, Adobe CC, Unity 3D, and Sketch.
-  </p>
-</div>
+        <h3>Role</h3>
+        <p>
+          As a technical lecturer, I taught students the required technical understanding for each project involving basic Javascript, semantic HTML, CSS animation, and Unity3D game development. I supported students throughout the semester by building template projects, troubleshooting, and giving advice on UX design.
+        </p>
 
-<div class="block block--half">
-  <img class="block__image" src="/assets/lecturing-02.jpg" alt ="lecturing">
-  <img class="block__image" src="/assets/lecturing-01.jpg" alt ="lecturing">
+        <h3>Talk Topics</h3>
+        <p>
+          I taught classes twice a week on the following subjects:
+        </p>
+        <ul>
+          <li>UX and Interface Design</li>
+          <li>Responsive Design</li>
+          <li>Accessibility</li>
+          <li>Knowing Your User</li>
+          <li>Design Thinking</li>
+          <li>The Importance Of Semantics</li>
+        </ul>
+        <p>
+          I also taught students the tools they needed to build each project: HTML, CSS, jQuery, vanilla Javascript, Adobe CC, Unity 3D, and Sketch.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img class="full-image" src="/assets/lecturing-02.jpg" alt ="lecturing">
+        <img class="full-image" src="/assets/lecturing-01.jpg" alt ="lecturing">
+      </div>
+    </div>
+    <div class="post-nav">
+      {% if page.previous %}
+        <a class="post-nav__prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+      {% if page.next %}
+        <a class="post-nav__next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+      {% endif %}
+    </div>
+  </div>
 </div>

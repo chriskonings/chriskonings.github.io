@@ -9,33 +9,58 @@ thumbnail: /assets/duinoride-thumbnail.jpg
 permalink: /work/:title/
 ---
 
-<div class="block">
-  <div class="videoWrapper">
-    <iframe width="560" height="349" src="//www.youtube.com/embed/8IeQWnyf8-w" frameborder="0" allowfullscreen></iframe>
+<div class="grid-fixed">
+  <div class="post-wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="main-tagline bold">Duinoride</h1>
+        <h2>
+          A VR experience with an Oculus and an Arduino.
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="videoWrapper">
+          <iframe width="560" height="349" src="//www.youtube.com/embed/8IeQWnyf8-w" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Out Of The Comfort Zone</h3>
+        <p>
+          I'm always trying to push myself outside of my comfort zone and my final year of university was no exception. I built a virtual reality experience with a micro-controller, Oculus Rift DK1, Unity and a motorised fan.
+        </p>
+        <h3>Concept</h3>
+        <p>
+          The VR experience put the player in a virtual drivers seat. As the car sped up a fan would blow in the players direction to simulate wind rushing past their head.
+        </p>
+        <a class="button" href="https://drive.google.com/file/d/0B2gaddbTuV-1M0k0aUhkLWFZUlE/view?usp=sharing" target="_blank" title="download project document">Download Project Document</a>
+      </div>
+
+      <div class="col-md-6">
+        <h3>Tools</h3>
+        <ul>
+          <li>Unity3D</li>
+          <li>Oculus Rift (Oculus SDK)</li>
+          <li>Unityscript/Javascript</li>
+          <li>C#</li>
+          <li>Arduino</li>
+          <li>9V Motor</li>
+          <li>3D Printer</li>
+        </ul>
+      </div>
+    </div>
+    <div class="post-nav">
+      {% if page.previous %}
+        <a class="post-nav__prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+      {% if page.next %}
+        <a class="post-nav__next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+      {% endif %}
+    </div>
   </div>
-</div>
-
-<div class="block block--half">
-  <h3>Out Of The Comfort Zone</h3>
-  <p>
-    I'm always trying to push myself outside of my comfort zone and my final year of university was no exception. I built a virtual reality experience with a micro-controller, Oculus Rift DK1, Unity and a motorised fan.
-  </p>
-  <h3>Concept</h3>
-  <p>
-    The VR experience put the player in a virtual drivers seat. As the car sped up a fan would blow in the players direction to simulate wind rushing past their head.
-  </p>
-  <a class="button" href="https://drive.google.com/file/d/0B2gaddbTuV-1M0k0aUhkLWFZUlE/view?usp=sharing" target="_blank" title="download project document">Download Project Document</a>
-</div>
-
-<div class="block block--half">
-  <h3>Tools</h3>
-  <ul>
-    <li>Unity3D</li>
-    <li>Oculus Rift (Oculus SDK)</li>
-    <li>Unityscript/Javascript</li>
-    <li>C#</li>
-    <li>Arduino</li>
-    <li>9V Motor</li>
-    <li>3D Printer</li>
-  </ul>
 </div>

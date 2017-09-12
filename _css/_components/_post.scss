@@ -1,5 +1,5 @@
 .post-wrapper {
-  margin: 15px auto 60px auto;
+  margin: 15px auto;
   padding: 0 20px;
   max-width: 960px;
   &::after, &::before {
@@ -35,8 +35,7 @@
 }
 
 .main-tagline {
-  font-weight: 700;
-  margin: 0 auto;
+  margin: 25px auto;
   font-size: 2.441em;
   line-height: $heading-line-height;
   @media only screen and (min-width: 768px) {
@@ -51,7 +50,7 @@
   width: 100%;
   margin: 0 auto;
   max-width: 960px;
-  padding: 100px 0 50px 0;
+  padding: 25px 0;
   display: flex;
 }
 

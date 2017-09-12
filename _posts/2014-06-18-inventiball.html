@@ -9,31 +9,56 @@ thumbnail: /assets/inventiball-thumbnail.jpg
 permalink: /work/:title/
 ---
 
+<div class="grid-fixed">
+  <div class="post-wrapper">
+    
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="main-tagline bold">Inventiball</h1>
+        <h2>
+          A conceptual puzzle game made in Unity3D.
+        </h2>
+      </div>
+    </div>
 
-<div class="block">
-  <div class="videoWrapper">
-    <iframe width="560" height="349" src="//www.youtube.com/embed/DKTbamy_2hc" frameborder="0" allowfullscreen></iframe>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="videoWrapper">
+          <iframe width="560" height="349" src="//www.youtube.com/embed/DKTbamy_2hc" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p>
+        Inventiball is a light-hearted puzzle game that I prototyped in the third year of my university Digital Media Development course.</p>
+        <p>
+        I collaborated with <a href="https://twitter.com/jaredhemmings" target="_blank" title="jared hemmings">Jared Hemmings</a> to build the game in two weeks. We focussed on the pick-up-and-play value by allowing the user to have fun in short bursts in the form of levels/challenges.
+        </p>
+        <p>
+        Each level gave the player a challenge to move a ball from one end of a grid to another (using provided blocks) whilst avoiding obstacles.
+        </p>
+        <h3>Tools:</h3>
+        <ul>
+        <li>Unity3D</li>
+        <li>Unityscript/Javascript</li>
+        <li>Photoshop</li>
+        <li>Illustrator</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <img class="full-image" src="/assets/inventiball-thumbnail.jpg" alt="inventiball"/>
+      </div>
+    </div>
+    <div class="post-nav">
+      {% if page.previous %}
+        <a class="post-nav__prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+      {% if page.next %}
+        <a class="post-nav__next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+      {% endif %}
+    </div>
   </div>
-</div>
-
-<div class="block block--half">
-  <p>
-  Inventiball is a light-hearted puzzle game that I prototyped in the third year of my university Digital Media Development course.</p>
-  <p>
-  I collaborated with <a href="https://twitter.com/jaredhemmings" target="_blank" title="jared hemmings">Jared Hemmings</a> to build the game in two weeks. We focussed on the pick-up-and-play value by allowing the user to have fun in short bursts in the form of levels/challenges.
-  </p>
-  <p>
-  Each level gave the player a challenge to move a ball from one end of a grid to another (using provided blocks) whilst avoiding obstacles.
-  </p>
-  <h3>Tools:</h3>
-  <ul>
-    <li>Unity3D</li>
-    <li>Unityscript/Javascript</li>
-    <li>Photoshop</li>
-    <li>Illustrator</li>
-  </ul>
-</div>
-
-<div class="block block--half">
-  <img class="block__image" src="/assets/inventiball-thumbnail.jpg" alt="inventiball"/>
 </div>
