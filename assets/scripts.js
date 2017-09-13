@@ -5,3 +5,15 @@
 //     content.classList.toggle('accordion__content--open');
 //   }, false);
 // });
+
+var everythingLoaded = setInterval(function() {
+  if (/loaded|complete/.test(document.readyState)) {
+    clearInterval(everythingLoaded);
+    init();
+  }
+}, 10);
+
+function init() {
+  document.querySelector('.content').classList.add('content--loaded');
+  document.querySelector('.loader').classList.add('loader--hidden');
+}

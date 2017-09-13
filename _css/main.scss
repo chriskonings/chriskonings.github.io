@@ -36,6 +36,64 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
+.content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.content--loaded {
+  opacity: 1;
+  & .loader {
+    opacity: 0;
+  }
+}
+
+.loader {
+  opacity: 1;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  margin: auto;
+  z-index: 99;
+  &::before {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 10px;
+    background: #000;
+    margin: 0 auto;
+    transform: translateX(-100%);
+    animation-name: loader-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+  }
+}
+
+.loader--hidden {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes loader-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
 .black-bar {
   width: 100%;
   height: 400px;
@@ -128,7 +186,7 @@ html {
 .svg-illustration:hover {
   #book-group {
     transition: 1s ease;
-    transform: translate(0, -20px);  
+    transform: translate(0, -20px);
   }
 }
 
