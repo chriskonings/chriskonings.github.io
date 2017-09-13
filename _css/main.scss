@@ -17,7 +17,7 @@
 @import '_pages/grid-cheat-sheet';
 
 html {
-  min-height: 100vh;
+  // min-height: 100vh;
   font-size: $base-font-size;
 }
 
@@ -31,27 +31,15 @@ html {
   font-family: $primary-font-family;
   background-color: $white-color;
   line-height: $base-line-height;
-  min-height: 100vh;
+  // min-height: 100vh;
   height: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-.content {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.content--loaded {
-  opacity: 1;
-  & .loader {
-    opacity: 0;
-  }
 }
 
 .loader {
   opacity: 1;
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

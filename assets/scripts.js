@@ -14,6 +14,5 @@ var everythingLoaded = setInterval(function() {
 }, 10);
 
 function init() {
-  document.querySelector('.content').classList.add('content--loaded');
   document.querySelector('.loader').classList.add('loader--hidden');
 }
